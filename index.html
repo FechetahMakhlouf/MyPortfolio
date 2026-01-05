@@ -47,11 +47,13 @@
 
             </ul>
             <!-- Close button-->
-            <div class="nav__close" id="nav-close"></div>
+            <div class="nav__close" id="nav-close">
+               <i class="ri-close-large-line"></i>
+            </div>
          </div>
          <!--Toggel menu-->
-         <div class="nav__toggel" id="nav-toggel">
-
+         <div class="nav__toggle" id="nav-toggle">
+            <i class="ri-menu-line"></i>
          </div>
       </nav>
    </header>
@@ -60,7 +62,44 @@
    <main class="main">
       <!--==================== HOME ====================-->
       <section class="home section" id="home">
+         <div class="home__container container grid">
+            <div class="home__content">
+               <div class="home__image">
+                  <img src="assets/img/home-perfil.png" alt="image" class="home__img">
+               </div>
 
+               <div class="home__social">
+                  <a href="https://www.linkedin.com/" target="_blank" class="home__link">
+                     <i class="ri-linkedin-box-fill"></i>
+                  </a>
+
+                  <a href="https://github.com/bedimcode" target="_blank" class="home__link">
+                     <i class="ri-github-fill"></i>
+                  </a>
+
+                  <a href="https://dribbble.com/" target="_blank" class="home__link">
+                     <i class="ri-dribbble-line"></i>
+                  </a>
+               </div>
+            </div>
+            <div class="home_data grid">
+               <p class="home_subtitle">
+                  Hi, I'm a <span id="home-typed">Web Developer</span>
+               </p>
+
+               <h1 class="home_title">Kai Marx</h1>
+
+               <p class="home_description">
+                  Web developer and designer based in Lima, Peru, specializing in creating websites for businesses. See
+                  my portfolio, which includes modern websites, designs, and more.
+               </p>
+
+               <div class="home_buttons">
+                  <a href="assets/pdf/Kai-Cv.pdf" download="" target="_blank" class="button">Download CV</a>
+                  <a href="#projects" class="button button__ghost">Projects</a>
+               </div>
+            </div>
+         </div>
       </section>
 
       <!--==================== ABOUT ====================-->
