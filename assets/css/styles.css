@@ -388,9 +388,61 @@ img {
   border-color: var(--first-color);
 }
 
+/*=============== CERTIFICATIONS ===============*/
+.certifications__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 1rem;
+  max-width: 700px;
+  margin: 1rem auto;
+}
+
+.certification__card {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 8px 16px hsla(0, 0%, 0%, .5);
+  transition: transform .4s, box-shadow .4s;
+  cursor: pointer;
+  justify-self: center;
+}
+
+.certification__card:hover {
+  transform: translateY(-.5rem);
+  box-shadow: 0 8px 24px hsla(var(--hue), 80%, 48%, .3);
+}
+
+.certification__img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.certification__title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+  color: var(--white-color);
+  padding: 1.5rem 1rem .75rem;
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+  text-align: center;
+}
+
+.certif-title {
+  justify-content: center;
+  text-align: center;
+}
+
+
 /*=============== PROJECTS ===============*/
 .projects__container {
   row-gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .projects__card {
@@ -399,6 +451,7 @@ img {
   overflow: hidden;
   box-shadow: 0 8px 16px hsla(0, 0%, 0%, .5);
   transition: box-shadow .4s;
+  justify-self: center;
 }
 
 .projects__data {
@@ -711,6 +764,7 @@ img {
     grid-template-columns: 400px;
     justify-content: center;
   }
+
 }
 
 @media screen and (min-width: 768px) {
@@ -823,7 +877,7 @@ img {
   }
 
   .projects__container {
-    grid-template-columns: repeat(3, 350px);
+    grid-template-columns: repeat(2, 350px);
     gap: 3rem 2rem;
   }
 
