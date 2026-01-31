@@ -121,34 +121,3 @@ sr.reveal(`.about__content, .contact__content`, { origin: 'bottom' })
 sr.reveal(`.about__image, .contact__form`, { delay: 300 })
 
 sr.reveal(`.projects__card`, { interval: 100 })
-
-/*=============== Detect mobile ===============*/
-const certificationCards = document.querySelectorAll('.certification__card');
-
-certificationCards.forEach(card => {
-    card.addEventListener('click', function (e) {
-        // Check if mobile
-        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-
-        if (isMobile) {
-            e.preventDefault();
-            const pdfUrl = this.getAttribute('href');
-
-            // Force download on mobile
-            fetch(pdfUrl)
-                .then(response => response.blob())
-                .then(blob => {
-                    const url = window.URL.createObjectURL(blob);
-                    const a = document.createElement('a');
-                    a.style.display = 'none';
-                    a.href = url;
-                    a.download = pdfUrl.split('/').pop();
-                    document.body.appendChild(a);
-                    a.click();
-                    window.URL.revokeObjectURL(url);
-                    document.body.removeChild(a);
-                })
-                .catch(err => console.error('Download error:', err));
-        }
-    });
-});
