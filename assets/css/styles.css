@@ -9,7 +9,7 @@
   /* 
       Change color:
 
-      Default Cyan: hsl(180, 80%, 48%)
+      Cyan: hsl(180, 80%, 48%)
       Blue: hsl(220, 90%, 64%) - Pink: hsl(300, 70%, 64%)
       Green: hsl(110, 70%, 64%) - Purple: hsl(255, 70%, 64%)
       Orange: hsl(15, 80%, 64%) - Red: hsl(358, 80%, 64%)
@@ -44,76 +44,14 @@
   --z-fixed: 100;
 }
 
-/* ========== MODE CLAIR (par défaut) ========== */
+/* ========== MODE CLAIR ========== */
 :root {
-  /* Couleurs principales */
-  --first-color: #00d4d4;
-  --first-color-alt: #00b8b8;
-
-  /* Couleurs de fond */
   --body-color: #ffffff;
   --container-color: #f8f9fa;
   --container-color-alt: #ffffff;
-
-  /* Couleurs de texte */
-  --title-color: #000000;
-  --text-color: #000000;
-  --text-color-light: #000000;
-
-  /* Header */
-  --header-bg: rgba(255, 255, 255, 0.95);
-
-  /* Bordures et séparateurs */
-  --border-color: #e8e8e8;
-
-  /* Ombres */
-  --shadow-small: 0 2px 8px rgba(0, 0, 0, 0.06);
-  --shadow-medium: 0 4px 16px rgba(0, 0, 0, 0.08);
-  --shadow-large: 0 8px 24px rgba(0, 0, 0, 0.1);
-
-  /* Inputs et formulaires */
-  --input-bg: #000000;
-  --input-border: #000000;
-  --input-text: #000000;
 }
 
-/* ========== MODE SOMBRE ========== */
-body.dark-theme {
-  /* Couleurs principales (restent identiques) */
-  --first-color: #00d4d4;
-  --first-color-alt: #00b8b8;
-
-  /* Couleurs de fond */
-  --body-color: #0f0f0f;
-  --container-color: #1a1a1a;
-  --container-color-alt: #252525;
-
-  /* Couleurs de texte */
-  --title-color: #000000;
-  --text-color: #000000;
-  --text-color-light: #000000;
-
-  /* Header */
-  --header-bg: rgba(15, 15, 15, 0.95);
-
-  /* Bordures et séparateurs */
-  --border-color: #2a2a2a;
-
-  /* Ombres */
-  --shadow-small: 0 2px 8px rgba(0, 0, 0, 0.3);
-  --shadow-medium: 0 4px 16px rgba(0, 0, 0, 0.4);
-  --shadow-large: 0 8px 24px rgba(0, 0, 0, 0.5);
-
-  /* Inputs et formulaires */
-  --input-bg: #000000;
-  --input-border: #000000;
-  --input-text: #000000;
-}
-
-body:not(.dark-theme) {
-  color: black;
-}
-
+body:not(.dark-theme),
 body:not(.dark-theme) .nav__link,
 body:not(.dark-theme) .button__ghost,
 body:not(.dark-theme) .nav__logo,
@@ -134,6 +72,13 @@ body:not(.dark-theme) .contact__link:hover,
 body:not(.dark-theme) .footer__logo:hover,
 body:not(.dark-theme) .footer__link:hover {
   color: var(--first-color);
+}
+
+/* ========== MODE SOMBRE ========== */
+body.dark-theme {
+  --body-color: #0f0f0f;
+  --container-color: #1a1a1a;
+  --container-color-alt: #252525;
 }
 
 .change-theme {
