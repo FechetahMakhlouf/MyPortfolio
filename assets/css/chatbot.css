@@ -12,7 +12,7 @@
     justify-content: center;
     cursor: pointer;
     border-radius: 50%;
-    background: #5350C4;
+    background: var(--first-color);
     transition: all 0.2s ease;
 }
 
@@ -116,7 +116,7 @@ body.show-chatbot .chatbot-popup {
     overflow-y: auto;
     flex-direction: column;
     scrollbar-width: thin;
-    scrollbar-color: #0a24eb transparent;
+    scrollbar-color: var(--first-color);
 }
 
 .chat-body .message {
@@ -133,7 +133,7 @@ body.show-chatbot .chatbot-popup {
     flex-shrink: 0;
     margin-bottom: 2px;
     align-self: flex-end;
-    background: #5350C4;
+    background: var(--first-color);
     border-radius: 50%;
 }
 
@@ -180,7 +180,7 @@ body.show-chatbot .chatbot-popup {
     width: 7px;
     opacity: 0.7;
     border-radius: 50%;
-    background: #6F6BC2;
+    background: var(--first-color);
     animation: dotPulse 1.8s ease-in-out infinite;
 }
 
@@ -231,7 +231,7 @@ body.show-chatbot .chatbot-popup {
 }
 
 .chat-footer .chat-form:focus-within {
-    outline: 2px solid #5350C4;
+    outline: 2px solid var(--first-color);
 }
 
 .chat-form .message-input {
@@ -249,7 +249,7 @@ body.show-chatbot .chatbot-popup {
 }
 
 .chat-form .message-input:hover {
-    scrollbar-color: #1c24bd transparent;
+    scrollbar-color: var(--first-color) transparent;
 }
 
 .chat-form .chat-controls {
@@ -266,7 +266,7 @@ body.show-chatbot .chatbot-popup {
     border: none;
     font-size: 1.15rem;
     cursor: pointer;
-    color: #706DB0;
+    color: var(--first-color);
     background: none;
     border-radius: 50%;
     transition: 0.2s ease;
@@ -279,7 +279,7 @@ body.show-chatbot .chatbot-popup {
 .chat-form .chat-controls #send-message {
     color: #fff;
     display: none;
-    background: #5350C4;
+    background: var(--first-color);
 }
 
 .chat-form .message-input:valid~.chat-controls #send-message {
@@ -287,7 +287,7 @@ body.show-chatbot .chatbot-popup {
 }
 
 .chat-form .chat-controls #send-message:hover {
-    background: #3d39ac;
+    background: var(--first-color);
 }
 
 .chat-form .chat-controls button:hover {
