@@ -4,7 +4,8 @@ const sendMessageButton = document.querySelector("#send-message");
 const userData = {
     message: null
 }
-
+const API_KEY = "AIzaSyCk0qNP62LA_S_hEAU04VpT9ywiXz4TrAU";
+const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${API_KEY}`;
 
 // Create message element with dynamic classes and return it
 const createMessageElement = (content, ...classes) => {
@@ -12,6 +13,33 @@ const createMessageElement = (content, ...classes) => {
     div.classList.add("message", ...classes);
     div.innerHTML = content;
     return div;
+}
+const generateBotResponse = async (incomingMessageDiv) => {
+    const messageElement = incomingMessageDiv.querySelector(".message-text");
+
+    const requestOptions = {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+            contents: [{
+                parts: [{ text: userData.message }]
+            }]
+        })
+    }
+
+    try {
+        const response = await fetch(API_URL, requestOptions);
+        const data = await response.json();
+        if (!response.ok) throw new Error(data.error.message);
+
+        const apiResponseText = data.candidates[0].content.parts[0].text.replace(/\*\*(.*?)\*\*/g, "$1").trim();
+        messageElement.innerText = apiResponseText;
+    } catch (error) {
+        console.log(error);
+    } finally {
+        incomingMessageDiv.classList.remove("thinking");
+        chatBody.scrollTo({ top: chatBody.scrollHeight, behavior: "smooth" });
+    }
 }
 
 const handleOutgoingMessage = (e) => {
@@ -22,6 +50,7 @@ const handleOutgoingMessage = (e) => {
     const outgoingMessageDiv = createMessageElement(messageContent, "user-message");
     outgoingMessageDiv.querySelector(".message-text").innerText = userData.message;
     chatBody.appendChild(outgoingMessageDiv);
+    chatBody.scrollTo({ top: chatBody.scrollHeight, behavior: "smooth" });
 
     setTimeout(() => {
         const messageContent = `<svg class="bot-avatar" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 1024 1024">
@@ -39,6 +68,8 @@ const handleOutgoingMessage = (e) => {
 
         const incomingMessageDiv = createMessageElement(messageContent, "bot-message", "thinking");
         chatBody.appendChild(incomingMessageDiv);
+        chatBody.scrollTo({ top: chatBody.scrollHeight, behavior: "smooth" });
+        generateBotResponse(incomingMessageDiv);
     }, 600);
 }
 
