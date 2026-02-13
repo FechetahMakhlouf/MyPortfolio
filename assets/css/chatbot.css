@@ -174,6 +174,7 @@
 
 .chat-footer .chat-form {
     display: flex;
+    position: relative;
     align-items: center;
     background: #fff;
     border-radius: 32px;
@@ -215,6 +216,10 @@
     transition: 0.2s ease;
 }
 
+.chat-form .file-upload-wrapper :where(img, button) {
+    position: absolute;
+}
+
 .chat-form .chat-controls #send-message {
     color: #fff;
     display: none;
@@ -248,6 +253,32 @@
     border-radius: 50%;
 }
 
-.chat-form .file-upload-wrapper.file-uploaded img {
+.chat-form .file-upload-wrapper #file-cancel {
+    color: #ff0000;
+    background: #fff;
+}
+
+.chat-form .file-upload-wrapper :where(img, #file-cancel),
+.chat-form .file-upload-wrapper.file-uploaded #file-upload {
+    display: none;
+}
+
+.chat-form .file-upload-wrapper.file-uploaded img,
+.chat-form .file-upload-wrapper.file-uploaded:hover #file-cancel {
     display: block;
+}
+
+em-emoji-picker {
+    position: absolute;
+    left: 50%;
+    top: -337px;
+    width: 100%;
+    max-width: 350px;
+    max-height: 330px;
+    visibility: hidden;
+    transform: translateX(-50%);
+}
+
+body.show-emoji-picker em-emoji-picker {
+    visibility: visible;
 }
