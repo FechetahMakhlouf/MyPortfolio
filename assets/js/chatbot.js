@@ -30,12 +30,58 @@ const createMessageElement = (content, ...classes) => {
 const generateBotResponse = async (incomingMessageDiv) => {
     const messageElement = incomingMessageDiv.querySelector(".message-text");
 
+    // Contexte système avec les informations personnelles du CV
+    const systemContext = `Tu es l'assistant personnel de FECHETAH Makhlouf. Réponds aux questions en utilisant les informations suivantes:
+
+INFORMATIONS PERSONNELLES:
+- Nom complet: FECHETAH Makhlouf
+- Date de naissance: 10/02/2003 à M'chedallah
+- Adresse: SAHARIDJ W BOUIRA
+- Statut: Célibataire (Single)
+- Nationalité: Algérien
+- Téléphone: +213 0666218828
+- Email: makhlouffechetah65@gmail.com
+
+FORMATION ACADÉMIQUE:
+- 2025-2026: 1ère année Master en Informatique à l'Université de Bouira
+- 2025: Licence en Informatique, spécialisation Systèmes d'Information
+- 2024-2025: 3ème année Licence en Informatique à l'Université de Bouira
+- 2023-2024: 2ème année Licence en Informatique à l'Université de Bouira
+- 2022-2023: 1ère année Licence en Informatique à l'Université de Bouira
+- 2022: Diplôme de Lycée en Sciences Expérimentales (BELKACEMI ALI High School _ Saharidj)
+
+STAGE:
+- 25/02/2025 au 26/03/2025: Stage pratique à SONATRACH _ STATION SBM _ Beni Mansour
+
+LANGUES:
+- Français: Très bien parlé, lu et écrit
+- Anglais: Très bien parlé, lu et écrit
+- Arabe: Très bien parlé, lu et écrit
+- Kabyle: Langue maternelle
+
+COMPÉTENCES:
+- Adaptabilité
+- Compétences en communication
+- Responsable et apprécie le travail en équipe
+- Dynamique, actif, ponctuel, sérieux et disponible
+
+LOISIRS:
+Internet, littérature, musique, lecture, nouvelles technologies, voyages
+
+SKILLES:
+HTML , CSS , JavaScript , Python , Django , Git & Github , SQL , Algorithms & Data Structures , Machine Learning , Data Analysis
+
+Réponds de manière naturelle et personnalisée. Si on te demande des informations qui ne sont pas dans ce contexte, dis que tu ne disposes pas de cette information spécifique.`;
+
+    // Combiner le contexte système avec le message de l'utilisateur
+    const fullMessage = systemContext + "\n\nQuestion de l'utilisateur: " + userData.message;
+
     const requestOptions = {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
             contents: [{
-                parts: [{ text: userData.message }, ...(userData.file.data ? [{ inline_data: userData.file }] : [])]
+                parts: [{ text: fullMessage }, ...(userData.file.data ? [{ inline_data: userData.file }] : [])]
             }]
         })
     }
