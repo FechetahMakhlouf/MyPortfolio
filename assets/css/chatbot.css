@@ -84,8 +84,8 @@ body.show-chatbot .chatbot-popup {
 
 .header-info .logo-text {
     color: #fff;
-    font-size: 1.31rem;
-    font-weight: 600;
+    font-size: 1rem;
+    font-weight: 400;
 }
 
 .chat-header #close-chatbot {
@@ -128,7 +128,7 @@ body.show-chatbot .chatbot-popup {
 .chat-body .bot-message .bot-avatar {
     height: 35px;
     width: 35px;
-    padding: 6px;
+    padding: 1px;
     fill: #fff;
     flex-shrink: 0;
     margin-bottom: 2px;
