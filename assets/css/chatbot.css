@@ -14,6 +14,7 @@
     border-radius: 50%;
     background: var(--first-color);
     transition: all 0.2s ease;
+    z-index: 1001;
 }
 
 body.show-chatbot #chatbot-toggler {
@@ -35,6 +36,8 @@ body.show-chatbot #chatbot-toggler span:last-child {
 }
 
 .chatbot-popup {
+    display: flex;
+    flex-direction: column;
     position: fixed;
     right: 35px;
     bottom: 90px;
@@ -42,7 +45,7 @@ body.show-chatbot #chatbot-toggler span:last-child {
     background: #fff;
     overflow: hidden;
     opacity: 0;
-    height: auto;
+    height: 100%;
     max-height: 70%;
     transform: scale(0.2);
     transform-origin: bottom right;
@@ -51,6 +54,7 @@ body.show-chatbot #chatbot-toggler span:last-child {
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1),
         0 10px 25px -30px rgba(0, 0, 0, 0.5);
     transition: all 0.1s ease;
+    z-index: 1000;
 }
 
 body.show-chatbot .chatbot-popup {
@@ -60,6 +64,7 @@ body.show-chatbot .chatbot-popup {
 }
 
 .chat-header {
+    flex-shrink: 0;
     display: flex;
     align-items: center;
     background: var(--first-color);
@@ -113,11 +118,12 @@ body.show-chatbot .chatbot-popup {
 }
 
 .chat-body {
+    flex: 1;
     padding: 25px 22px;
     display: flex;
     gap: 20px;
-    height: 460px;
-    margin-bottom: 82px;
+    height: auto;
+    margin-bottom: 0px;
     overflow-y: auto;
     flex-direction: column;
     scrollbar-width: thin;
@@ -219,8 +225,8 @@ body.show-chatbot .chatbot-popup {
 }
 
 .chat-footer {
-    position: absolute;
-    bottom: 0;
+    position: static;
+    flex-shrink: 0;
     width: 100%;
     background: #fff;
     padding: 15px 22px 20px;
@@ -353,8 +359,7 @@ body.show-emoji-picker em-emoji-picker {
     .chatbot-popup {
         right: 0;
         bottom: 0;
-        height: 100%;
-        max-height: 91vh;
+        max-height: 100%;
         border-radius: 0;
         width: 100%;
     }
@@ -364,7 +369,7 @@ body.show-emoji-picker em-emoji-picker {
     }
 
     .chat-body {
-        height: calc(90% - 55px);
+        height: auto;
         padding: 25px 15px;
     }
 
@@ -374,6 +379,10 @@ body.show-emoji-picker em-emoji-picker {
 
     .chat-form .file-upload-wrapper.file-uploaded #file-cancel {
         opacity: 0;
+    }
+
+    body.show-chatbot #chatbot-toggler {
+        display: none;
     }
 }
 
