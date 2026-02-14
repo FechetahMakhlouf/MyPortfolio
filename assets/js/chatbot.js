@@ -31,7 +31,8 @@ const generateBotResponse = async (incomingMessageDiv) => {
     const messageElement = incomingMessageDiv.querySelector(".message-text");
 
     // Contexte système avec les informations personnelles du CV
-    const systemContext = `Tu es l'assistant personnel de FECHETAH Makhlouf. Réponds aux questions en utilisant les informations suivantes:
+    const systemContext = `Tu es un assistant pour makhlouf utile et généraliste.  
+Voici des informations sur FECHETAH Makhlouf (coordonnées, formation, compétences, loisirs, etc.) :
 
 INFORMATIONS PERSONNELLES:
 - Nom complet: FECHETAH Makhlouf
@@ -40,7 +41,7 @@ INFORMATIONS PERSONNELLES:
 - Statut: Célibataire (Single)
 - Nationalité: Algérien
 - Téléphone: +213 0666218828
-- Email: makhlouffechetah65@gmail.com
+- Email: makhlouf.fechetah@univ-bouira.dz
 
 FORMATION ACADÉMIQUE:
 - 2025-2026: 1ère année Master en Informatique à l'Université de Bouira
@@ -66,12 +67,13 @@ COMPÉTENCES:
 - Dynamique, actif, ponctuel, sérieux et disponible
 
 LOISIRS:
-Internet, littérature, musique, lecture, nouvelles technologies, voyages
+Internet, littérature, lecture, nouvelles technologies, voyages
 
 SKILLES:
 HTML , CSS , JavaScript , Python , Django , Git & Github , SQL , Algorithms & Data Structures , Machine Learning , Data Analysis
 
-Réponds de manière naturelle et personnalisée. Si on te demande des informations qui ne sont pas dans ce contexte, dis que tu ne disposes pas de cette information spécifique.`;
+Utilise ces informations UNIQUEMENT lorsque l'utilisateur pose une question explicite sur Makhlouf (son parcours, ses compétences, ses coordonnées, etc.).  
+Pour toutes les autres questions (culture générale, aide technique, blagues, etc.), réponds de manière normale, polie et utile, comme le ferait n'importe quel assistant IA.`;
 
     // Combiner le contexte système avec le message de l'utilisateur
     const fullMessage = systemContext + "\n\nQuestion de l'utilisateur: " + userData.message;
