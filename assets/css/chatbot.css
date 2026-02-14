@@ -67,6 +67,10 @@ body.show-chatbot .chatbot-popup {
     justify-content: space-between;
 }
 
+.chatbot-popup .chat-header {
+    padding: 7px 20px;
+}
+
 .chat-header .header-info {
     display: flex;
     gap: 10px;
@@ -356,7 +360,7 @@ body.show-emoji-picker em-emoji-picker {
     }
 
     .chatbot-popup .chat-header {
-        padding: 12px 15px;
+        padding: 7px 20px;
     }
 
     .chat-body {
