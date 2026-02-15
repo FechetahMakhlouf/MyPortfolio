@@ -17,7 +17,7 @@ const userData = {
 
 const initialInputHeight = messageInput.scrollHeight;
 
-const API_KEY = "AIzaSyCk0qNP62LA_S_hEAU04VpT9ywiXz4TrAU";
+const API_KEY = "AIzaSyCD8KrFrR5ktHgDrwpayLwDg4gp-4Vg964";
 const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${API_KEY}`;
 
 // Create message element with dynamic classes and return it
