@@ -17,7 +17,7 @@ if not API_KEY:
 
 GEMINI_URL = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key={API_KEY}"
 
-SYSTEM_CONTEXT = """Tu es un assistant pour makhlouf utile et généraliste.  
+SYSTEM_CONTEXT = """Tu es un assistant pour fechetah makhlouf utile et généraliste.  
 Voici des informations sur FECHETAH Makhlouf (coordonnées, formation, compétences, loisirs, etc.) :
 
 INFORMATIONS PERSONNELLES:
