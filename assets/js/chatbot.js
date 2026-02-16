@@ -17,7 +17,7 @@ const userData = {
 
 const initialInputHeight = messageInput.scrollHeight;
 
-const BACKEND_URL = "https://chatbot-server.onrender.com";
+const BACKEND_URL = "https://chatbot-server-5f8c.onrender.com";
 
 const createMessageElement = (content, ...classes) => {
     const div = document.createElement("div");
