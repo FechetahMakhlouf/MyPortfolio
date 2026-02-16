@@ -62,7 +62,7 @@ Utilise ces informations UNIQUEMENT lorsque l'utilisateur pose une question expl
 Pour toutes les autres questions (culture générale, aide technique, blagues, etc.), réponds de manière normale, polie et utile, comme le ferait n'importe quel assistant IA."""
 
 
-@app.route('/chat', methods=['POST'])
+@app.route('/', methods=['POST'])
 def chat():
     """
     Endpoint principal du chatbot.
@@ -113,4 +113,5 @@ def chat():
 
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port, debug=False)
