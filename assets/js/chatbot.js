@@ -17,18 +17,15 @@ const userData = {
 
 const initialInputHeight = messageInput.scrollHeight;
 
-const BACKEND_URL = "http://localhost:5000/chat";
+const BACKEND_URL = "https://chatbot-serveur.onrender.com";
 
-// const API_KEY = "AIzaSyCD8KrFrR5ktHgDrwpayLwDg4gp-4Vg964";
-// const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${API_KEY}`;
-
-// Create message element with dynamic classes and return it
 const createMessageElement = (content, ...classes) => {
     const div = document.createElement("div");
     div.classList.add("message", ...classes);
     div.innerHTML = content;
     return div;
 }
+
 const generateBotResponse = async (incomingMessageDiv) => {
     const messageElement = incomingMessageDiv.querySelector(".message-text");
 
@@ -59,6 +56,7 @@ const generateBotResponse = async (incomingMessageDiv) => {
         chatBody.scrollTo({ top: chatBody.scrollHeight, behavior: "smooth" });
     }
 }
+
 const handleOutgoingMessage = (e) => {
     e.preventDefault();
     userData.message = messageInput.value.trim();
@@ -92,7 +90,6 @@ const handleOutgoingMessage = (e) => {
     }, 600);
 }
 
-// Handle Enter key press for sending messages
 messageInput.addEventListener("keydown", (e) => {
     const userMessage = e.target.value.trim();
     if (e.key === "Enter" && userMessage && !e.shiftKey && window.innerWidth > 768) {
@@ -106,7 +103,7 @@ messageInput.addEventListener("input", () => {
     document.querySelector(".chat-form").style.borderRadius = messageInput.scrollHeight > initialInputHeight ? "8px" : "15px";
 });
 
-// Handle file input change
+
 fileInput.addEventListener("change", () => {
     const file = fileInput.files[0];
     if (!file) return;
@@ -117,7 +114,6 @@ fileInput.addEventListener("change", () => {
         fileUploadWrapper.classList.add("file-uploaded");
         const base64String = e.target.result.split(",")[1];
 
-        // Store file data in userData
         userData.file = {
             data: base64String,
             mime_type: file.type

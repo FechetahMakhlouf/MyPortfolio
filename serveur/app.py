@@ -4,27 +4,19 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 from dotenv import load_dotenv
 
-# Charger les variables d'environnement depuis le fichier .env
 load_dotenv()
 
-# Initialiser l'application Flask
 app = Flask(__name__)
 
-# Activer CORS pour permettre les requêtes depuis votre frontend
-# En production, vous pouvez restreindre aux seuls domaines autorisés
 CORS(app)
 
-# Récupérer la clé API depuis les variables d'environnement
 API_KEY = os.getenv("GEMINI_API_KEY")
 if not API_KEY:
     raise ValueError(
         "La clé API GEMINI_API_KEY n'est pas définie dans le fichier .env")
 
-# URL de l'API Gemini (assurez-vous d'utiliser le bon modèle)
 GEMINI_URL = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key={API_KEY}"
 
-# Contexte système (les informations personnelles de Makhlouf)
-# Vous pouvez le conserver ici pour ne pas l'exposer dans le frontend
 SYSTEM_CONTEXT = """Tu es un assistant pour makhlouf utile et généraliste.  
 Voici des informations sur FECHETAH Makhlouf (coordonnées, formation, compétences, loisirs, etc.) :
 
@@ -78,16 +70,14 @@ def chat():
     Retourne un JSON avec la réponse du bot.
     """
     try:
-        # Récupérer les données envoyées par le frontend
+
         data = request.get_json()
         user_message = data.get('message', '')
-        # Dictionnaire avec 'data' (base64) et 'mime_type'
+
         file_data = data.get('file', {})
 
-        # Construire le message complet pour Gemini : contexte + question
         full_message = SYSTEM_CONTEXT + "\n\nQuestion de l'utilisateur: " + user_message
 
-        # Préparer les "parts" (texte + éventuellement image)
         parts = [{"text": full_message}]
         if file_data and file_data.get('data'):
             parts.append({
@@ -97,42 +87,30 @@ def chat():
                 }
             })
 
-        # Corps de la requête pour l'API Gemini
         payload = {
             "contents": [{
                 "parts": parts
             }]
         }
 
-        # Appel à l'API Gemini
         response = requests.post(GEMINI_URL, json=payload)
-        response.raise_for_status()  # Lève une exception si erreur HTTP
+        response.raise_for_status()
 
-        # Analyser la réponse JSON de Gemini
         result = response.json()
-        # Extraire le texte de la réponse (attention à la structure exacte)
+
         bot_reply = result['candidates'][0]['content']['parts'][0]['text']
 
-        # Optionnel : nettoyer la réponse (ex: supprimer les ** pour le gras)
-        # ou utiliser une regex plus sophistiquée
         bot_reply = bot_reply.replace('**', '')
 
-        # Retourner la réponse au frontend
         return jsonify({"reply": bot_reply})
 
     except requests.exceptions.RequestException as e:
-        # Erreur lors de l'appel à l'API Gemini
         return jsonify({"error": f"Erreur API Gemini: {str(e)}"}), 500
     except KeyError as e:
-        # Erreur dans la structure de la réponse (parsing)
         return jsonify({"error": f"Erreur de parsing: {str(e)}"}), 500
     except Exception as e:
-        # Autre erreur inattendue
         return jsonify({"error": f"Erreur interne: {str(e)}"}), 500
 
 
 if __name__ == '__main__':
-    # Lancer le serveur en mode développement
-    # host='0.0.0.0' permet d'accepter les connexions depuis l'extérieur (si besoin)
-    # port=5000 est le port par défaut
     app.run(debug=True, host='0.0.0.0', port=5000)
