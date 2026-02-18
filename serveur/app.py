@@ -13,7 +13,7 @@ CORS(app)
 API_KEY = os.getenv("GEMINI_API_KEY")
 if not API_KEY:
     raise ValueError(
-        "La clé API GEMINI_API_KEY n'est pas définie dans le fichier .env")
+        "API GEMINI_API_KEY n'est pas définie dans le fichier .env")
 
 GEMINI_URL = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key={API_KEY}"
 
