@@ -108,11 +108,11 @@ def chat():
         return jsonify({"reply": bot_reply})
 
     except requests.exceptions.RequestException as e:
-        return jsonify({"error": f"Erreur API Gemini: {str(e)}"}), 500
+        return jsonify({"error": f"Please write your message again"}), 500
     except KeyError as e:
-        return jsonify({"error": f"Erreur de parsing: {str(e)}"}), 500
+        return jsonify({"error": f"Please write your message again"}), 500
     except Exception as e:
-        return jsonify({"error": f"Erreur interne: {str(e)}"}), 500
+        return jsonify({"error": f"Please write your message again"}), 500
 
 
 if __name__ == '__main__':

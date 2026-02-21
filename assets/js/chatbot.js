@@ -48,7 +48,7 @@ const generateBotResponse = async (incomingMessageDiv) => {
         messageElement.innerText = data.reply;
     } catch (error) {
         console.log(error);
-        messageElement.innerHTML = error.message;
+        messageElement.innerHTML = "Please write your message again";
         messageElement.style.color = "#ff0000";
     } finally {
         userData.file = {};
