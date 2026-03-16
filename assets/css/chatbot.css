@@ -42,7 +42,10 @@ body.show-chatbot #chatbot-toggler span:last-child {
     right: 35px;
     bottom: 90px;
     width: 420px;
-    background: #fff;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     overflow: hidden;
     opacity: 0;
     height: 100%;
@@ -50,11 +53,15 @@ body.show-chatbot #chatbot-toggler span:last-child {
     transform: scale(0.2);
     transform-origin: bottom right;
     pointer-events: none;
-    border-radius: 15px;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1),
-        0 10px 25px -30px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 10px 35px -30px rgba(0, 0, 0, 0.5);
     transition: all 0.1s ease;
     z-index: 1000;
+}
+
+body.dark-theme .chatbot-popup {
+    background: rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.1);
 }
 
 body.show-chatbot .chatbot-popup {
@@ -67,7 +74,8 @@ body.show-chatbot .chatbot-popup {
     flex-shrink: 0;
     display: flex;
     align-items: center;
-    background: var(--first-color);
+    background: rgba(0, 180, 180, 0.7);
+    backdrop-filter: blur(5px);
     padding: 15px 22px;
     justify-content: space-between;
 }
@@ -114,7 +122,6 @@ body.show-chatbot .chatbot-popup {
 
 .chat-header #close-chatbot:hover {
     background: #147a72;
-    ;
 }
 
 .chat-body {
@@ -228,15 +235,17 @@ body.show-chatbot .chatbot-popup {
     position: static;
     flex-shrink: 0;
     width: 100%;
-    background: #fff;
+    background: transparent;
+    backdrop-filter: blur(5px);
     padding: 15px 22px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .chat-footer .chat-form {
     display: flex;
     position: relative;
     align-items: center;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 32px;
     outline: 1px solid #CCCCE5;
 }
@@ -257,6 +266,8 @@ body.show-chatbot .chatbot-popup {
     border-radius: inherit;
     scrollbar-width: thin;
     scrollbar-color: transparent transparent;
+    background: transparent;
+    color: inherit;
 }
 
 .chat-form .message-input:hover {
@@ -386,15 +397,10 @@ body.show-emoji-picker em-emoji-picker {
     }
 }
 
-/*=============== DARK THEME SUPPORT ===============*/
+/* Dark theme support (already in styles.css, but keep for consistency) */
 body.dark-theme .chatbot-popup {
-    background: #1a1a1a;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5),
-        0 10px 35px -30px rgba(0, 0, 0, 0.8);
-}
-
-body.dark-theme .chat-body {
-    color: #e0e0e0;
+    background: rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.1);
 }
 
 body.dark-theme .chat-body .bot-message .message-text {
@@ -402,57 +408,10 @@ body.dark-theme .chat-body .bot-message .message-text {
     color: #e0e0e0;
 }
 
-body.dark-theme .chat-body .user-message .message-text {
-    color: #fff;
-    background: var(--first-color);
-}
-
-body.dark-theme .chat-footer {
-    background: #1a1a1a;
-    border-top: 1px solid #333;
-}
-
-body.dark-theme .chat-form {
-    background: #252525;
-    outline: 1px solid #404040;
-}
-
-body.dark-theme .chat-form:focus-within {
-    outline: 2px solid var(--first-color);
-}
-
 body.dark-theme .chat-form .message-input {
-    background: #252525;
     color: #e0e0e0;
 }
 
-body.dark-theme .chat-form .message-input::placeholder {
-    color: #888;
-}
-
-body.dark-theme .chat-form .chat-controls button {
-    color: var(--first-color);
-}
-
-body.dark-theme .chat-form .chat-controls button:hover {
-    background: #333;
-}
-
-body.dark-theme .chat-form .chat-controls #send-message {
-    color: #fff;
-    background: var(--first-color);
-}
-
-body.dark-theme .chat-form .chat-controls #send-message:hover {
-    background: var(--first-color-alt);
-}
-
-body.dark-theme .header-info .logo-text {
-    color: #fff;
-}
-
-body.dark-theme em-emoji-picker {
-    --rgb-background: 26, 26, 26;
-    --rgb-input: 37, 37, 37;
-    --rgb-color: 224, 224, 224;
+body.dark-theme .chat-footer {
+    border-top-color: #333;
 }

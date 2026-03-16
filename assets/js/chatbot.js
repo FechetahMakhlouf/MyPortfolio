@@ -103,7 +103,6 @@ messageInput.addEventListener("input", () => {
     document.querySelector(".chat-form").style.borderRadius = messageInput.scrollHeight > initialInputHeight ? "8px" : "15px";
 });
 
-
 fileInput.addEventListener("change", () => {
     const file = fileInput.files[0];
     if (!file) return;
