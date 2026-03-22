@@ -18,6 +18,74 @@
       gtag('config', 'G-WN4T85DMVT');
    </script>
    <title>Makhlouf Fechetah</title>
+
+   <style>
+      /* ===== LANGUAGE SWITCHER ===== */
+      .lang-switcher {
+         display: flex;
+         align-items: center;
+         gap: 0;
+         background: var(--container-color);
+         border: 2px solid var(--first-color);
+         border-radius: 20px;
+         overflow: hidden;
+         cursor: pointer;
+         height: 28px;
+      }
+
+      .lang-btn {
+         padding: 0 8px;
+         font-size: 0.72rem;
+         font-weight: 700;
+         font-family: var(--body-font);
+         color: var(--text-color);
+         background: transparent;
+         border: none;
+         cursor: pointer;
+         height: 100%;
+         transition: background 0.25s, color 0.25s;
+         letter-spacing: 0.5px;
+      }
+
+      .lang-btn.active-lang {
+         background: var(--first-color);
+         color: #fff;
+         border-radius: 18px;
+      }
+
+      .lang-divider {
+         width: 1px;
+         height: 16px;
+         background: var(--first-color);
+         opacity: 0.5;
+      }
+
+      /* ---- Always show left-of-logo switcher, never the actions one ---- */
+      .lang-switcher--desktop {
+         display: flex;
+      }
+
+      .lang-switcher--mobile {
+         display: none !important;
+      }
+
+      /* ---- Mobile tweaks ---- */
+      @media screen and (max-width: 768px) {
+         .lang-switcher--desktop {
+            height: 24px;
+         }
+
+         .lang-switcher--desktop .lang-btn {
+            font-size: 0.64rem;
+            padding: 0 6px;
+         }
+
+         /* Shrink logo so it doesn't crowd the switcher */
+         .nav__logo {
+            font-size: 1rem !important;
+         }
+      }
+   </style>
 </head>
 
 <body>
@@ -26,20 +94,37 @@
 
    <header class="header" id="header">
       <nav class="nav container">
+
+         <!-- 🖥️ Desktop: language switcher LEFT of logo -->
+         <div class="lang-switcher lang-switcher--desktop" title="Switch language">
+            <button class="lang-btn active-lang" data-lang="en">EN</button>
+            <div class="lang-divider"></div>
+            <button class="lang-btn" data-lang="fr">FR</button>
+         </div>
+
          <a href="#" class="nav__logo">Makhlouf</a>
+
          <div class="nav__menu" id="nav-menu">
             <ul class="nav__list">
-               <li><a href="#home" class="nav__link active-link">Home</a></li>
-               <li><a href="#about" class="nav__link">About</a></li>
-               <li><a href="#projects" class="nav__link">Projects</a></li>
-               <li><a href="#resume" class="nav__link">Resume</a></li>
-               <li><a href="#contact" class="nav__link">Contact</a></li>
+               <li><a href="#home" class="nav__link active-link" data-i18n="nav.home">Home</a></li>
+               <li><a href="#about" class="nav__link" data-i18n="nav.about">About</a></li>
+               <li><a href="#projects" class="nav__link" data-i18n="nav.projects">Projects</a></li>
+               <li><a href="#resume" class="nav__link" data-i18n="nav.resume">Resume</a></li>
+               <li><a href="#contact" class="nav__link" data-i18n="nav.contact">Contact</a></li>
             </ul>
             <div class="nav__close" id="nav-close"><i class="ri-close-large-line"></i></div>
          </div>
+
          <div class="nav__actions">
+            <!-- 📱 Mobile: language switcher next to 🌙 -->
+            <div class="lang-switcher lang-switcher--mobile" title="Switch language">
+               <button class="lang-btn active-lang" data-lang="en">EN</button>
+               <div class="lang-divider"></div>
+               <button class="lang-btn" data-lang="fr">FR</button>
+            </div>
             <i class="ri-moon-line change-theme" id="theme-button"></i>
          </div>
+
          <div class="nav__toggle" id="nav-toggle"><i class="ri-menu-line"></i></div>
       </nav>
    </header>
@@ -60,17 +145,19 @@
                </div>
             </div>
             <div class="home__data grid">
-               <p class="home__subtitle">Hi, I'm a <span id="home-typed"></span></p>
+               <p class="home__subtitle"><span data-i18n="home.greeting">Hi, I'm a</span> <span id="home-typed"></span>
+               </p>
                <h1 class="home__title">Fechetah Makhlouf</h1>
-               <p class="home__description">
+               <p class="home__description" data-i18n="home.description">
                   Master's student in Artificial Intelligence at the University of Bouira, Algeria.
                   Python developer passionate about web development, data science, and AI technologies.
                   Certified in Python Mastery with a solid foundation in full-stack development.
                </p>
                <div class="home__buttons">
                   <a href="assets/CV.png" download target="_blank" class="button"><i class="ri-download-line"></i>
-                     CV</a>
-                  <a href="#projects" class="button button__ghost"><i class="ri-code-box-line"></i> Projects</a>
+                     <span data-i18n="home.cv">CV</span></a>
+                  <a href="#projects" class="button button__ghost"><i class="ri-code-box-line"></i> <span
+                        data-i18n="home.projects">Projects</span></a>
                </div>
             </div>
          </div>
@@ -81,17 +168,18 @@
          <div class="about__container container grid">
             <div class="about__content">
                <div class="about__data">
-                  <h2 class="section__title">About Me</h2>
-                  <p class="about__description">
+                  <h2 class="section__title" data-i18n="about.title">About Me</h2>
+                  <p class="about__description" data-i18n="about.description">
                      I am a computer science student specializing in Information Systems and Artificial Intelligence.
                      I have a strong foundation in programming with Python, web development, and databases, and I am
                      continuously improving my skills through projects and certifications.
                   </p>
-                  <a href="#contact" class="button button__ghost">Contact Me</a>
+                  <a href="#contact" class="button button__ghost" data-i18n="about.contact">Contact Me</a>
                </div>
             </div>
             <div class="about__skills">
-               <h3 class="about__subtitle"><i class="ri-bookmark-3-fill"></i> <span>Skills</span></h3>
+               <h3 class="about__subtitle"><i class="ri-bookmark-3-fill"></i> <span
+                     data-i18n="about.skills">Skills</span></h3>
                <ul class="about__items">
                   <li class="about__item"><i class="ri-html5-fill"></i> HTML</li>
                   <li class="about__item"><i class="ri-css3-fill"></i> CSS</li>
@@ -100,30 +188,33 @@
                   <li class="about__item"><i class="ri-django-fill"></i> Django</li>
                   <li class="about__item"><i class="ri-github-fill"></i> Git & Github</li>
                   <li class="about__item"><i class="ri-database-2-fill"></i> SQL</li>
-                  <li class="about__item"><i class="ri-code-s-slash-fill"></i> Algorithms & Data Structures</li>
+                  <li class="about__item"><i class="ri-code-s-slash-fill"></i> <span data-i18n="about.algo">Algorithms &
+                        Data Structures</span></li>
                   <li class="about__item"><i class="ri-robot-fill"></i> Machine Learning</li>
-                  <li class="about__item"><i class="ri-bar-chart-2-fill"></i> Data Analysis</li>
+                  <li class="about__item"><i class="ri-bar-chart-2-fill"></i> <span data-i18n="about.data">Data
+                        Analysis</span></li>
                </ul>
             </div>
          </div>
-         <h3 class="about__subtitle certif-title"><i class="ri-award-line"></i> <span>Certifications</span></h3>
+         <h3 class="about__subtitle certif-title"><i class="ri-award-line"></i> <span
+               data-i18n="about.certifications">Certifications</span></h3>
          <div class="about__container">
             <div class="about__items certifications__grid">
                <a href="assets/pdf/Python Certificate.pdf" download target="_blank" class="certification__card">
                   <img src="assets/img/cert-python.jpg" alt="Certificate Python" class="certification__img">
-                  <p class="certification__title">Complete Mastery Python</p>
+                  <p class="certification__title" data-i18n="cert.python">Complete Mastery Python</p>
                </a>
                <a href="assets/pdf/Git Certificate.pdf" download target="_blank" class="certification__card">
                   <img src="assets/img/cert-git.jpg" alt="Certificate Git & GitHub" class="certification__img">
-                  <p class="certification__title">Complete Mastery Git & Github</p>
+                  <p class="certification__title" data-i18n="cert.git">Complete Mastery Git & Github</p>
                </a>
                <a href="assets/pdf/SQL Certificate.pdf" download target="_blank" class="certification__card">
                   <img src="assets/img/cert-sql.jpg" alt="Certificate SQL" class="certification__img">
-                  <p class="certification__title">Complete Mastery SQL</p>
+                  <p class="certification__title" data-i18n="cert.sql">Complete Mastery SQL</p>
                </a>
                <a href="assets/pdf/Gemini Certificate.pdf" download target="_blank" class="certification__card">
                   <img src="assets/img/cert-gemini.jpg" alt="Gemini Certificate" class="certification__img">
-                  <p class="certification__title">Google Gemini Certificate</p>
+                  <p class="certification__title" data-i18n="cert.gemini">Google Gemini Certificate</p>
                </a>
             </div>
          </div>
@@ -131,36 +222,35 @@
 
       <!-- PROJECTS -->
       <section class="projects section" id="projects">
-         <h2 class="section__title">Projects</h2>
+         <h2 class="section__title" data-i18n="nav.projects">Projects</h2>
          <div class="projects__container container grid">
             <article class="projects__card">
                <img src="assets/img/project-1.jpeg" alt="image" class="projects__img">
                <div class="projects__data">
-                  <h3 class="projects__title">Medical Desktop App</h3>
-                  <p class="projects__description">SONATRACH Medical Management System.</p>
-                  <a href="https://github.com/FechetahMakhlouf" target="_blank" class="button button__ghost">View
-                     Project</a>
+                  <h3 class="projects__title" data-i18n="project1.title">Medical Desktop App</h3>
+                  <p class="projects__description" data-i18n="project1.desc">SONATRACH Medical Management System.</p>
+                  <a href="https://github.com/FechetahMakhlouf" target="_blank" class="button button__ghost"
+                     data-i18n="project.view">View Project</a>
                </div>
             </article>
             <article class="projects__card">
                <img src="assets/img/project-2.jpeg" alt="image" class="projects__img">
                <div class="projects__data">
-                  <h3 class="projects__title">CFPA website</h3>
-                  <p class="projects__description">A comprehensive web application for managing a professional training
-                     center.</p>
-                  <a href="https://github.com/FechetahMakhlouf" target="_blank" class="button button__ghost">View
-                     Project</a>
+                  <h3 class="projects__title" data-i18n="project2.title">CFPA website</h3>
+                  <p class="projects__description" data-i18n="project2.desc">A comprehensive web application for
+                     managing a professional training center.</p>
+                  <a href="https://github.com/FechetahMakhlouf" target="_blank" class="button button__ghost"
+                     data-i18n="project.view">View Project</a>
                </div>
             </article>
-            <!-- New project: Jadwal - Time Management App -->
             <article class="projects__card">
                <img src="assets/img/project-3.jpeg" alt="image" class="projects__img">
                <div class="projects__data">
-                  <h3 class="projects__title">Jadwal - Time Management App</h3>
-                  <p class="projects__description">A comprehensive web application for weekly schedule management with
-                     automatic planning generation.</p>
+                  <h3 class="projects__title" data-i18n="project3.title">Jadwal - Time Management App</h3>
+                  <p class="projects__description" data-i18n="project3.desc">A comprehensive web application for weekly
+                     schedule management with automatic planning generation.</p>
                   <a href="https://fechetahmakhlouf.github.io/Gestion-du-Temps/" target="_blank"
-                     class="button button__ghost">View Project</a>
+                     class="button button__ghost" data-i18n="project.view">View Project</a>
                </div>
             </article>
          </div>
@@ -168,51 +258,55 @@
 
       <!-- RESUME (Timeline) -->
       <section class="resume section" id="resume">
-         <h2 class="section__title">My Resume</h2>
+         <h2 class="section__title" data-i18n="resume.title">My Resume</h2>
          <div class="resume__container container grid">
             <div class="resume__content">
-               <h3 class="resume__subtitle"><i class="ri-graduation-cap-fill"></i> <span>Education</span></h3>
+               <h3 class="resume__subtitle"><i class="ri-graduation-cap-fill"></i> <span
+                     data-i18n="resume.education">Education</span></h3>
                <div class="timeline">
                   <div class="timeline-item">
                      <div class="timeline-dot"></div>
                      <div class="timeline-content">
-                        <h3 class="resume__title">Master's Degree in Computer Science - Artificial Intelligence</h3>
+                        <h3 class="resume__title" data-i18n="edu1.title">Master's Degree in Computer Science -
+                           Artificial Intelligence</h3>
                         <span class="timeline-date">2025-2027</span>
-                        <p class="resume__description">First year of Master's degree, specializing in Artificial
-                           Intelligence (in progress).</p>
+                        <p class="resume__description" data-i18n="edu1.desc">First year of Master's degree, specializing
+                           in Artificial Intelligence (in progress).</p>
                         <address>Akli Mohand Oulhadj University - Bouira</address>
                      </div>
                   </div>
                   <div class="timeline-item">
                      <div class="timeline-dot"></div>
                      <div class="timeline-content">
-                        <h3 class="resume__title">Bachelor's Degree in Computer Science - Computer Systems</h3>
+                        <h3 class="resume__title" data-i18n="edu2.title">Bachelor's Degree in Computer Science -
+                           Computer Systems</h3>
                         <span class="timeline-date">2022-2025</span>
-                        <p class="resume__description">Diploma obtained in June 2025.</p>
+                        <p class="resume__description" data-i18n="edu2.desc">Diploma obtained in June 2025.</p>
                         <address>Akli Mohand Oulhadj University - Bouira</address>
                      </div>
                   </div>
                   <div class="timeline-item">
                      <div class="timeline-dot"></div>
                      <div class="timeline-content">
-                        <h3 class="resume__title">Baccalaureate in Experimental Sciences</h3>
+                        <h3 class="resume__title" data-i18n="edu3.title">Baccalaureate in Experimental Sciences</h3>
                         <span class="timeline-date">2022</span>
-                        <p class="resume__description">Grade: Fairly Good (12.96).</p>
+                        <p class="resume__description" data-i18n="edu3.desc">Grade: Fairly Good (12.96).</p>
                         <address>Belkacemi Ali High School - Saharidj</address>
                      </div>
                   </div>
                </div>
             </div>
             <div class="resume__content">
-               <h3 class="resume__subtitle"><i class="ri-award-fill"></i> <span>Experience</span></h3>
+               <h3 class="resume__subtitle"><i class="ri-award-fill"></i> <span
+                     data-i18n="resume.experience">Experience</span></h3>
                <div class="timeline">
                   <div class="timeline-item">
                      <div class="timeline-dot"></div>
                      <div class="timeline-content">
-                        <h3 class="resume__title">Practical Internship</h3>
+                        <h3 class="resume__title" data-i18n="exp1.title">Practical Internship</h3>
                         <span class="timeline-date">25/02/2025 - 26/03/2025</span>
-                        <p class="resume__description">Practical internship in Computer Systems at the national company
-                           SONATRACH.</p>
+                        <p class="resume__description" data-i18n="exp1.desc">Practical internship in Computer Systems at
+                           the national company SONATRACH.</p>
                         <address>SONATRACH - SBM</address>
                      </div>
                   </div>
@@ -223,23 +317,24 @@
 
       <!-- CONTACT -->
       <section class="contact section" id="contact">
-         <h2 class="section__title">Contact Me</h2>
+         <h2 class="section__title" data-i18n="contact.title">Contact Me</h2>
          <div class="contact__container container grid">
             <form action="" class="contact__form grid" id="contact-form">
                <div class="form-group">
                   <input type="text" name="user_name" required class="contact__input" placeholder=" ">
-                  <span class="floating-label">Name</span>
+                  <span class="floating-label" data-i18n="contact.name">Name</span>
                </div>
                <div class="form-group">
                   <input type="email" name="user_email" required class="contact__input" placeholder=" ">
-                  <span class="floating-label">Email</span>
+                  <span class="floating-label" data-i18n="contact.email">Email</span>
                </div>
                <div class="form-group">
                   <textarea name="user_message" required class="contact__input contact__area"
                      placeholder=" "></textarea>
-                  <span class="floating-label">Message</span>
+                  <span class="floating-label" data-i18n="contact.message">Message</span>
                </div>
-               <button type="submit" class="button"><i class="ri-send-plane-fill"></i> Send Message</button>
+               <button type="submit" class="button"><i class="ri-send-plane-fill"></i> <span
+                     data-i18n="contact.send">Send Message</span></button>
                <p class="contact__message" id="contact-message"></p>
             </form>
             <div class="contact__content grid">
@@ -249,8 +344,8 @@
                   </address>
                   <address class="contact__address"><i class="ri-smartphone-fill"></i> <span>+213-666218828</span>
                   </address>
-                  <address class="contact__address"><i class="ri-map-pin-2-fill"></i> <span>Algeria, Bouira,
-                        Saharidj</span></address>
+                  <address class="contact__address"><i class="ri-map-pin-2-fill"></i> <span
+                        data-i18n="contact.location">Algeria, Bouira, Saharidj</span></address>
                </div>
                <div class="contact__social">
                   <a href="https://Wa.me/+213666218828" target="_blank" class="contact__link"><i
@@ -305,9 +400,9 @@
       <div class="footer__container container grid">
          <a href="#" class="footer__logo">Makhlouf</a>
          <div class="footer__links">
-            <a href="#home" class="footer__link">Home</a>
-            <a href="#about" class="footer__link">About</a>
-            <a href="#projects" class="footer__link">Projects</a>
+            <a href="#home" class="footer__link" data-i18n="nav.home">Home</a>
+            <a href="#about" class="footer__link" data-i18n="nav.about">About</a>
+            <a href="#projects" class="footer__link" data-i18n="nav.projects">Projects</a>
          </div>
          <div class="footer__social">
             <a href="https://www.facebook.com/share/12MfhqrZF4R/" target="_blank" class="footer__social-link"><i
@@ -316,18 +411,19 @@
                class="footer__social-link"><i class="ri-instagram-fill"></i></a>
          </div>
       </div>
-      <span class="footer__copy">© 2026 All Rights Reserved | Makhlouf Fechetah</span>
+      <span class="footer__copy" data-i18n="footer.copy">© 2026 All Rights Reserved | Makhlouf Fechetah</span>
    </footer>
 
    <a href="#" class="scrollup" id="scroll-up"><i class="ri-arrow-up-line"></i></a>
 
    <!-- Scripts -->
+   <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.min.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/emoji-mart@latest/dist/browser.js"></script>
    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-   <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.0/dist/vanilla-tilt.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
    <script src="assets/js/main.js"></script>
    <script src="assets/js/chatbot.js"></script>
 </body>
