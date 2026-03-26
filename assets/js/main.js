@@ -32,6 +32,8 @@ const translations = {
         'project2.desc': 'A comprehensive web application for managing a professional training center.',
         'project3.title': 'Jadwal - Time Management App',
         'project3.desc': 'A comprehensive web application for weekly schedule management with automatic planning generation.',
+        'project4.title': 'Cat vs Non-Cat Detector',
+        'project4.desc': 'Logistic regression classifier built with a Neural Network mindset to detect cats in images, with a Streamlit web app and data augmentation pipeline.',
 
         'resume.title': 'My Resume',
         'resume.education': 'Education',
@@ -91,6 +93,8 @@ const translations = {
         'project2.desc': "Une application web complète pour la gestion d'un centre de formation professionnelle.",
         'project3.title': 'Jadwal - Application de Gestion du Temps',
         'project3.desc': "Une application web complète pour la gestion d'emplois du temps hebdomadaires avec génération automatique de plannings.",
+        'project4.title': 'Détecteur Chat / Non-Chat',
+        'project4.desc': "Classificateur de régression logistique inspiré des réseaux de neurones pour détecter les chats dans des images, avec une application Streamlit et un pipeline d'augmentation de données.",
 
         'resume.title': 'Mon Curriculum Vitae',
         'resume.education': 'Formation',
