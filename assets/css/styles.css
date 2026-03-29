@@ -492,7 +492,7 @@ img {
 /*=============== CERTIFICATIONS ===============*/
 .certifications__grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: 1.5rem;
   margin-top: 1rem;
   max-width: 900px;
@@ -943,6 +943,10 @@ img {
   .resume__container,
   .contact__container {
     grid-template-columns: repeat(2, 350px);
+  }
+
+  .certifications__grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .contact__content {
