@@ -8,12 +8,12 @@ const translations = {
         'nav.contact': 'Contact',
 
         'home.greeting': "Hi, I'm a",
-        'home.description': 'Master\'s student in Artificial Intelligence at the University of Bouira, Algeria. Python developer passionate about web development, data science, and AI technologies. Certified in Python Mastery with a solid foundation in full-stack development.',
+        'home.description': 'Master\'s student in Artificial Intelligence at the University of Bouira, Algeria.\n Python developer with a strong passion for web development, data science, and AI.\n Currently deepening my expertise in Deep Learning and building production ready ML projects.\n Solid foundations in machine learning, neural networks, and full stack development.',
         'home.cv': 'CV',
         'home.projects': 'Projects',
 
         'about.title': 'About Me',
-        'about.description': 'I am a computer science student specializing in Information Systems and Artificial Intelligence. I have a strong foundation in programming with Python, web development, and databases, and I am continuously improving my skills through projects and certifications.',
+        'about.description': 'I\'m a computer science student specialising in Information Systems and Artificial Intelligence.\n I\'ve built a solid foundation in Python, web development, databases, and machine learning.\n I hold certifications in Python Mastery, SQL, Git & GitHub, Google Gemini, and Neural Networks & Deep Learning.\n I\'m currently pursuing the Deep Learning Specialisation to further master architectures like CNNs, RNNs, and Transformers.\n I love turning ideas into code and continuously improving through real‑world projects.',
         'about.contact': 'Contact Me',
         'about.skills': 'Skills',
         'about.algo': 'Algorithms & Data Structures',
@@ -69,12 +69,12 @@ const translations = {
         'nav.contact': 'Contact',
 
         'home.greeting': "Bonjour, je suis",
-        'home.description': "Étudiant en Master d'Intelligence Artificielle à l'Université de Bouira, Algérie. Développeur Python passionné par le développement web, la science des données et les technologies IA. Certifié en Python avec une solide base en développement full-stack.",
+        'home.description': "Étudiant en Master d’Intelligence Artificielle à l’Université de Bouira, Algérie.\n Développeur Python passionné par le développement web, la science des données et l’IA.\n Actuellement en approfondissement de ma expertise en Deep Learning et en construction de projets ML prêts pour la production.\n Solides bases en apprentissage automatique, réseaux de neurones et développement full‑stack.",
         'home.cv': 'CV',
         'home.projects': 'Projets',
 
         'about.title': 'À propos de moi',
-        'about.description': "Je suis étudiant en informatique spécialisé en Systèmes d'Information et Intelligence Artificielle. J'ai de solides bases en programmation Python, développement web et bases de données, et j'améliore continuellement mes compétences à travers des projets et des certifications.",
+        'about.description': "Je suis étudiant en informatique, spécialisé dans les Systèmes d’Information et l’Intelligence Artificielle.\n J’ai acquis de solides bases en Python, développement web, bases de données et apprentissage automatique.\n Je possède des certifications en Maîtrise Python, SQL, Git & GitHub, Google Gemini, ainsi qu’en Réseaux de Neurones et Deep Learning .\n Je poursuis actuellement la spécialisation Deep Learning pour maîtriser des architectures comme les CNN, RNN et Transformers.\n J’aime transformer les idées en code et m’améliorer continuellement grâce à des projets concrets.",
         'about.contact': 'Me Contacter',
         'about.skills': 'Compétences',
         'about.algo': 'Algorithmes & Structures de Données',

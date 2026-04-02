@@ -301,6 +301,10 @@ img {
   justify-self: center;
 }
 
+.home__description {
+  white-space: pre-line;
+}
+
 .floating {
   animation: float 3s ease-in-out infinite;
 }
@@ -447,6 +451,7 @@ img {
 
 .about__description {
   margin-bottom: 3rem;
+  white-space: pre-line;
 }
 
 .about__subtitle {
@@ -907,6 +912,11 @@ img {
   .projects__data .button {
     padding: .5rem .75rem;
   }
+
+  .home__description,
+  .about__description {
+    white-space: pre-line;
+  }
 }
 
 @media screen and (min-width: 540px) {
@@ -955,6 +965,11 @@ img {
 
   .contact__form {
     order: 1;
+  }
+
+  .home__description,
+  .about__description {
+    white-space: pre-line;
   }
 }
 
@@ -1101,6 +1116,11 @@ img {
 
   .scrollup {
     right: 35px;
+  }
+
+  .home__description,
+  .about__description {
+    white-space: pre-line;
   }
 }
 
