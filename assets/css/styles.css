@@ -14,6 +14,7 @@
   --black-color: #0f0f0f;
   --gray-color: #6b7280;
   --gray-light: #9ca3af;
+  --text-color: #ffffff;
 
   --body-color: #0a0a0a;
   --container-color: #141414;
@@ -59,6 +60,12 @@ body.light-theme {
   --border-color: #e2e8f0;
   --black-color: #1e293b;
   --gray-color: #64748b;
+  --gray-light: #64748b;
+  --text-color: #1e293b;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.12);
+  --shadow-glow: 0 0 20px rgba(var(--first-color-rgb), 0.2);
 }
 
 body.light-theme .nav__link,
@@ -86,7 +93,7 @@ body {
   font-size: var(--normal-font-size);
   font-weight: var(--font-regular);
   background-color: var(--body-color);
-  color: var(--white-color);
+  color: var(--text-color);
   line-height: 1.6;
   overflow-x: hidden;
 }
@@ -163,7 +170,7 @@ img {
 .section__title {
   font-size: var(--h1-font-size);
   font-weight: var(--font-bold);
-  color: var(--white-color);
+  color: var(--text-color);
 }
 
 /*=============== HEADER & NAV ===============*/
@@ -287,7 +294,7 @@ img {
   align-items: center;
   gap: 0.75rem;
   padding: 0.875rem 1rem;
-  color: var(--white-color);
+  color: var(--text-color);
   font-weight: var(--font-medium);
   border-radius: 10px;
   transition: all var(--transition-fast);
@@ -339,7 +346,7 @@ img {
 
 .nav__toggle {
   font-size: 1.5rem;
-  color: var(--white-color);
+  color: var(--text-color);
   cursor: pointer;
   padding: 0.5rem;
 }
@@ -420,7 +427,7 @@ img {
   background: var(--card-color);
   border: 1px solid var(--border-color);
   border-radius: 12px;
-  color: var(--white-color);
+  color: var(--text-color);
   font-size: 1.25rem;
   transition: all var(--transition-fast);
 }
@@ -466,7 +473,7 @@ img {
 .home__title {
   font-size: var(--bigger-font-size);
   font-weight: var(--font-bold);
-  color: var(--white-color);
+  color: var(--text-color);
   margin-bottom: 1rem;
 }
 
@@ -541,7 +548,7 @@ img {
 
 .button-ghost {
   background: transparent;
-  color: var(--white-color);
+  color: var(--text-color);
   border: 1px solid var(--border-color);
 }
 
@@ -615,7 +622,7 @@ img {
   align-items: center;
   gap: 0.5rem;
   font-size: var(--h4-font-size);
-  color: var(--white-color);
+  color: var(--text-color);
   margin-bottom: 1.5rem;
 }
 
@@ -654,7 +661,7 @@ img {
   padding: 0.5rem 0.875rem;
   border-radius: 8px;
   font-size: var(--small-font-size);
-  color: var(--white-color);
+  color: var(--text-color);
   transition: all var(--transition-fast);
 }
 
@@ -864,7 +871,7 @@ img {
 
 .project__btn--ghost {
   background: var(--container-color);
-  color: var(--white-color);
+  color: var(--text-color);
   border: 1px solid var(--border-color);
 }
 
@@ -1066,7 +1073,7 @@ img {
   display: block;
   font-size: 1.25rem;
   font-weight: var(--font-bold);
-  color: var(--white-color);
+  color: var(--text-color);
 }
 
 .stat-box .stat-label {
@@ -1121,7 +1128,7 @@ img {
 
 .contact__card p {
   font-size: var(--normal-font-size);
-  color: var(--white-color);
+  color: var(--text-color);
   margin-bottom: 0.75rem;
 }
 
@@ -1175,24 +1182,28 @@ img {
   height: 44px;
   border-radius: 12px;
   font-size: 1.25rem;
-  color: var(--white-color);
+  color: var(--text-color);
   transition: all var(--transition-fast);
 }
 
 .social__link--whatsapp {
   background: #25d366;
+  color: #ffffff;
 }
 
 .social__link--telegram {
   background: #0088cc;
+  color: #ffffff;
 }
 
 .social__link--linkedin {
   background: #0077b5;
+  color: #ffffff;
 }
 
 .social__link--github {
   background: #333;
+  color: #ffffff;
 }
 
 .social__link:hover {
@@ -1246,7 +1257,7 @@ img {
   border: 1px solid var(--border-color);
   border-radius: 12px;
   padding: 1rem 1rem 1rem 3rem;
-  color: var(--white-color);
+  color: var(--text-color);
   font-size: var(--normal-font-size);
   transition: all var(--transition-fast);
 }
@@ -1359,7 +1370,7 @@ img {
 
 .footer__links a {
   font-size: var(--small-font-size);
-  color: var(--white-color);
+  color: var(--text-color);
   transition: color var(--transition-fast);
 }
 
@@ -1374,6 +1385,7 @@ img {
 .footer__social .social__link {
   background: var(--card-color);
   border: 1px solid var(--border-color);
+  color: var(--text-color);
 }
 
 .footer__social .social__link:hover {

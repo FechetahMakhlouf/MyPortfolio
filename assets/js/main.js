@@ -306,40 +306,39 @@ if (contactForm) {
     });
 }
 
-/*=============== THEME TOGGLE ===============*/
+/*=============== THEME TOGGLE (LIGHT/DARK) ===============*/
 const themeButton = document.getElementById('theme-button');
-const darkTheme = 'dark-theme';
-const iconTheme = 'ri-sun-line';
+const lightThemeClass = 'light-theme';
+const iconTheme = 'ri-sun-line'; // icône pour le mode clair (soleil)
 
-const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light';
-const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'ri-moon-line' : 'ri-sun-line';
-
+// Vérifier le thème sauvegardé
 const selectedTheme = localStorage.getItem('selected-theme');
-const selectedIcon = localStorage.getItem('selected-icon');
-
-if (selectedTheme) {
-    document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme);
-    themeButton.classList[selectedIcon === 'ri-moon-line' ? 'add' : 'remove'](iconTheme);
+if (selectedTheme === 'light') {
+    document.body.classList.add(lightThemeClass);
+    themeButton.classList.add(iconTheme);
+    themeButton.classList.remove('ri-moon-line');
+} else {
+    document.body.classList.remove(lightThemeClass);
+    themeButton.classList.remove(iconTheme);
+    themeButton.classList.add('ri-moon-line');
 }
 
+// Basculer le thème au clic
 if (themeButton) {
     themeButton.addEventListener('click', () => {
-        document.body.classList.toggle(darkTheme);
-        themeButton.classList.toggle(iconTheme);
-        localStorage.setItem('selected-theme', getCurrentTheme());
-        localStorage.setItem('selected-icon', getCurrentIcon());
+        document.body.classList.toggle(lightThemeClass);
 
-        // Update icon
-        if (themeButton.classList.contains(iconTheme)) {
+        if (document.body.classList.contains(lightThemeClass)) {
+            themeButton.classList.add(iconTheme);
             themeButton.classList.remove('ri-moon-line');
-            themeButton.classList.add('ri-sun-line');
+            localStorage.setItem('selected-theme', 'light');
         } else {
-            themeButton.classList.remove('ri-sun-line');
+            themeButton.classList.remove(iconTheme);
             themeButton.classList.add('ri-moon-line');
+            localStorage.setItem('selected-theme', 'dark');
         }
     });
 }
-
 /*=============== LANGUAGE SWITCHER ===============*/
 document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.addEventListener('click', () => setLang(btn.getAttribute('data-lang')));
