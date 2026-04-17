@@ -7,141 +7,195 @@ const translations = {
         'nav.resume': 'Resume',
         'nav.contact': 'Contact',
 
+        'home.available': 'Available for work',
         'home.greeting': "Hi, I'm a",
-        'home.description': 'Master\'s student in Artificial Intelligence at the University of Bouira, Algeria.\n Python developer with a strong passion for web development, data science, and AI.\n Currently deepening my expertise in Deep Learning and building production ready ML projects.\n Solid foundations in machine learning, neural networks, and full stack development.',
-        'home.cv': 'CV',
-        'home.projects': 'Projects',
+        'home.description': "Master's student in Artificial Intelligence at the University of Bouira, Algeria. Python developer with a strong passion for web development, data science, and AI.",
+        'home.stats.projects': 'Projects',
+        'home.stats.certs': 'Certifications',
+        'home.cv': 'Download CV',
+        'home.projects': 'View Projects',
 
+        'about.subtitle': 'Get to know me',
         'about.title': 'About Me',
-        'about.description': 'I\'m a computer science student specialising in Information Systems and Artificial Intelligence.\n I\'ve built a solid foundation in Python, web development, databases, and machine learning.\n I hold certifications in Python Mastery, SQL, Git & GitHub, Google Gemini, and Neural Networks & Deep Learning.\n I\'m currently pursuing the Deep Learning Specialisation to further master architectures like CNNs, RNNs, and Transformers.\n I love turning ideas into code and continuously improving through real‑world projects.',
-        'about.contact': 'Contact Me',
-        'about.skills': 'Skills',
-        'about.algo': 'Algorithms & Data Structures',
-        'about.data': 'Data Analysis',
+        'about.whoami': 'Who am I?',
+        'about.mission': 'My Mission',
+        'about.missionText': "I love turning ideas into code and continuously improving through real-world projects. Currently pursuing the Deep Learning Specialisation to master CNNs, RNNs, and Transformers.",
+        'about.description': "I'm a computer science student specialising in Information Systems and Artificial Intelligence. I've built a solid foundation in Python, web development, databases, and machine learning.",
+        'about.skills': 'Technical Skills',
         'about.certifications': 'Certifications',
+        'cert.download': 'Download',
 
-        'cert.python': 'Complete Mastery Python',
-        'cert.git': 'Complete Mastery Git & Github',
-        'cert.sql': 'Complete Mastery SQL',
+        'cert.coursera': 'Neural Networks & Deep Learning',
+        'cert.python': 'Complete Python Mastery',
+        'cert.git': 'Complete Git & GitHub',
+        'cert.sql': 'Complete SQL Mastery',
         'cert.gemini': 'Google Gemini Certificate',
 
-        'project.view': 'View Project',
-        'project1.title': 'Medical Desktop App',
-        'project1.desc': 'SONATRACH Medical Management System.',
-        'project2.title': 'CFPA website',
-        'project2.desc': 'A comprehensive web application for managing a professional training center.',
-        'project3.title': 'Jadwal - Time Management App',
-        'project3.desc': 'A comprehensive web application for weekly schedule management with automatic planning generation.',
-        'project4.title': 'Cat vs Non-Cat Detector',
-        'project4.desc': 'Logistic regression classifier built with a Neural Network mindset to detect cats in images, with a Streamlit web app and data augmentation pipeline.',
+        'projects.subtitle': 'My recent work',
+        'project.code': 'Code',
+        'project.demo': 'Demo',
+        'project.live': 'Live',
 
-        'resume.title': 'My Resume',
+        'project1.title': 'Medical Desktop App',
+        'project1.desc': 'SONATRACH Medical Management System - Complete desktop application for managing medical records.',
+        'project2.title': 'CFPA Website',
+        'project2.desc': 'A comprehensive web application for managing a professional training center with student management.',
+        'project3.title': 'Jadwal - Time Management',
+        'project3.desc': 'Weekly schedule management with automatic planning generation and task tracking.',
+        'project4.title': 'Cat vs Non-Cat Detector',
+        'project4.desc': 'Neural Network classifier to detect cats in images with data augmentation pipeline.',
+
+        'resume.subtitle': 'My journey',
+        'resume.title': 'Resume',
         'resume.education': 'Education',
         'resume.experience': 'Experience',
+        'resume.quickStats': 'Quick Stats',
+        'resume.codes': 'Lines of Code',
+        'resume.commits': 'Git Commits',
 
-        'edu1.title': "Master's Degree in Computer Science - Artificial Intelligence",
-        'edu1.desc': "First year of Master's degree, specializing in Artificial Intelligence (in progress).",
-        'edu2.title': "Bachelor's Degree in Computer Science - Computer Systems",
-        'edu2.desc': 'Diploma obtained in June 2025.',
-        'edu3.title': 'Baccalaureate in Experimental Sciences',
-        'edu3.desc': 'Grade: Fairly Good (12.96).',
+        'edu1.title': "Master's in AI",
+        'edu1.desc': 'Specializing in Artificial Intelligence (in progress).',
+        'edu2.title': "Bachelor's in CS",
+        'edu2.desc': 'Computer Systems - Diploma obtained in June 2025.',
+        'edu3.title': 'Baccalaureate',
+        'edu3.desc': 'Experimental Sciences.',
 
         'exp1.title': 'Practical Internship',
         'exp1.desc': 'Practical internship in Computer Systems at the national company SONATRACH.',
 
+        'contact.subtitle': 'Get in touch',
         'contact.title': 'Contact Me',
-        'contact.name': 'Name',
-        'contact.email': 'Email',
-        'contact.message': 'Message',
-        'contact.send': 'Send Message',
+        'contact.emailTitle': 'Email',
+        'contact.phoneTitle': 'Phone',
+        'contact.locationTitle': 'Location',
         'contact.location': 'Algeria, Bouira, Saharidj',
-        'contact.success': 'Message sent successfully ✅',
+        'contact.timezone': 'GMT+1',
+        'contact.send': 'Send Email',
+        'contact.call': 'Call Now',
+        'contact.follow': 'Follow Me',
+        'contact.formTitle': 'Send a Message',
+        'contact.formDesc': "I'll get back to you as soon as possible!",
+        'contact.name': 'Your Name',
+        'contact.email': 'Your Email',
+        'contact.message': 'Your Message',
+        'contact.sendBtn': 'Send Message',
+        'contact.success': 'Message sent successfully! ✅',
 
-        'footer.copy': '© 2026 All Rights Reserved | Makhlouf Fechetah',
+        'footer.tagline': 'Building the future with code and AI',
+        'footer.quickLinks': 'Quick Links',
+        'footer.follow': 'Follow Me',
+        'footer.copy': '© 2025 All Rights Reserved | Makhlouf Fechetah',
 
         'typed.strings': ['AI Engineering Student', 'Python Developer', 'Web Developer'],
     },
     fr: {
         'nav.home': 'Accueil',
-        'nav.about': 'À propos',
+        'nav.about': 'Àpropos',
         'nav.projects': 'Projets',
         'nav.resume': 'CV',
         'nav.contact': 'Contact',
 
+        'home.available': 'Disponible pour travailler',
         'home.greeting': "Bonjour, je suis",
-        'home.description': "Étudiant en Master d’Intelligence Artificielle à l’Université de Bouira, Algérie.\n Développeur Python passionné par le développement web, la science des données et l’IA.\n Actuellement en approfondissement de ma expertise en Deep Learning et en construction de projets ML prêts pour la production.\n Solides bases en apprentissage automatique, réseaux de neurones et développement full‑stack.",
-        'home.cv': 'CV',
-        'home.projects': 'Projets',
+        'home.description': "Étudiant en Master d'Intelligence Artificielle à l'Université de Bouira, Algérie. Développeur Python passionné par le développement web, la science des données et l'IA.",
+        'home.stats.projects': 'Projets',
+        'home.stats.certs': 'Certifications',
+        'home.cv': 'Télécharger CV',
+        'home.projects': 'Voir Projets',
 
+        'about.subtitle': 'Faites ma connaissance',
         'about.title': 'À propos de moi',
-        'about.description': "Je suis étudiant en informatique, spécialisé dans les Systèmes d’Information et l’Intelligence Artificielle.\n J’ai acquis de solides bases en Python, développement web, bases de données et apprentissage automatique.\n Je possède des certifications en Maîtrise Python, SQL, Git & GitHub, Google Gemini, ainsi qu’en Réseaux de Neurones et Deep Learning .\n Je poursuis actuellement la spécialisation Deep Learning pour maîtriser des architectures comme les CNN, RNN et Transformers.\n J’aime transformer les idées en code et m’améliorer continuellement grâce à des projets concrets.",
-        'about.contact': 'Me Contacter',
-        'about.skills': 'Compétences',
-        'about.algo': 'Algorithmes & Structures de Données',
-        'about.data': 'Analyse de Données',
+        'about.whoami': 'Qui suis-je?',
+        'about.mission': 'Ma Mission',
+        'about.missionText': "J'aime transformer les idées en code et m'améliorer continuellement grâce à des projets concrets. Actuellement en spécialisation Deep Learning pour maîtriser les CNN, RNN et Transformers.",
+        'about.description': "Je suis étudiant en informatique, spécialisé dans les Systèmes d'Information et l'Intelligence Artificielle. J'ai acquis de solides bases en Python, développement web, bases de données et apprentissage automatique.",
+        'about.skills': 'Compétences Techniques',
         'about.certifications': 'Certifications',
+        'cert.download': 'Télécharger',
 
+        'cert.coursera': 'Réseaux de Neurones & Deep Learning',
         'cert.python': 'Maîtrise Complète Python',
-        'cert.git': 'Maîtrise Complète Git & Github',
+        'cert.git': 'Maîtrise Complète Git & GitHub',
         'cert.sql': 'Maîtrise Complète SQL',
         'cert.gemini': 'Certificat Google Gemini',
 
-        'project.view': 'Voir le Projet',
+        'projects.subtitle': 'Mes travaux récents',
+        'project.code': 'Code',
+        'project.demo': 'Démo',
+        'project.live': 'Live',
+
         'project1.title': 'Application Médicale Desktop',
-        'project1.desc': 'Système de Gestion Médicale SONATRACH.',
+        'project1.desc': "Système de Gestion Médicale SONATRACH - Application desktop complète pour la gestion des dossiers médicaux.",
         'project2.title': 'Site Web CFPA',
         'project2.desc': "Une application web complète pour la gestion d'un centre de formation professionnelle.",
-        'project3.title': 'Jadwal - Application de Gestion du Temps',
-        'project3.desc': "Une application web complète pour la gestion d'emplois du temps hebdomadaires avec génération automatique de plannings.",
+        'project3.title': 'Jadwal - Gestion du Temps',
+        'project3.desc': "Gestion d'emplois du temps hebdomadaires avec génération automatique de plannings.",
         'project4.title': 'Détecteur Chat / Non-Chat',
-        'project4.desc': "Classificateur de régression logistique inspiré des réseaux de neurones pour détecter les chats dans des images, avec une application Streamlit et un pipeline d'augmentation de données.",
+        'project4.desc': "Classificateur réseau de neurones pour détecter les chats dans des images.",
 
-        'resume.title': 'Mon Curriculum Vitae',
+        'resume.subtitle': 'Mon parcours',
+        'resume.title': 'Curriculum Vitae',
         'resume.education': 'Formation',
         'resume.experience': 'Expérience',
+        'resume.quickStats': 'Statistiques',
+        'resume.codes': 'Lignes de Code',
+        'resume.commits': 'Commits Git',
 
-        'edu1.title': "Master en Informatique - Intelligence Artificielle",
-        'edu1.desc': "Première année de master, spécialité Intelligence Artificielle (en cours).",
-        'edu2.title': "Licence en Informatique - Systèmes Informatiques",
-        'edu2.desc': 'Diplôme obtenu en juin 2025.',
-        'edu3.title': 'Baccalauréat en Sciences Expérimentales',
-        'edu3.desc': 'Mention : Assez Bien (12.96).',
+        'edu1.title': "Master en IA",
+        'edu1.desc': "Spécialisation en Intelligence Artificielle (en cours).",
+        'edu2.title': "Licence en Info",
+        'edu2.desc': 'Systèmes Informatiques - Diplôme obtenu en juin 2025.',
+        'edu3.title': 'Baccalauréat',
+        'edu3.desc': 'Sciences Expérimentales.',
 
         'exp1.title': 'Stage Pratique',
         'exp1.desc': "Stage pratique en systèmes informatiques au sein de l'entreprise nationale SONATRACH.",
 
+        'contact.subtitle': 'Contactez-moi',
         'contact.title': 'Me Contacter',
-        'contact.name': 'Nom',
-        'contact.email': 'E-mail',
-        'contact.message': 'Message',
-        'contact.send': 'Envoyer le Message',
+        'contact.emailTitle': 'Email',
+        'contact.phoneTitle': 'Téléphone',
+        'contact.locationTitle': 'Localisation',
         'contact.location': 'Algérie, Bouira, Saharidj',
-        'contact.success': 'Message envoyé avec succès ✅',
+        'contact.timezone': 'GMT+1',
+        'contact.send': 'Envoyer Email',
+        'contact.call': 'Appeler',
+        'contact.follow': 'Suivez-moi',
+        'contact.formTitle': 'Envoyer un Message',
+        'contact.formDesc': "Je vous répondrai dès que possible!",
+        'contact.name': 'Votre Nom',
+        'contact.email': 'Votre Email',
+        'contact.message': 'Votre Message',
+        'contact.sendBtn': 'Envoyer le Message',
+        'contact.success': 'Message envoyé avec succès! ✅',
 
-        'footer.copy': '© 2026 Tous droits réservés | Makhlouf Fechetah',
+        'footer.tagline': "Construire l'avenir avec le code et l'IA",
+        'footer.quickLinks': 'Liens Rapides',
+        'footer.follow': 'Suivez-moi',
+        'footer.copy': '© 2025 Tous droits réservés | Makhlouf Fechetah',
 
         'typed.strings': ["Étudiant en Ingénierie IA", "Développeur Python", "Développeur Web"],
     }
-}
+};
 
 /*=============== LANGUAGE SYSTEM ===============*/
-let currentLang = localStorage.getItem('selected-lang') || 'en'
-let typedInstance = null
+let currentLang = localStorage.getItem('selected-lang') || 'en';
+let typedInstance = null;
 
 const applyTranslations = (lang) => {
-    const t = translations[lang]
+    const t = translations[lang];
     document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.getAttribute('data-i18n')
+        const key = el.getAttribute('data-i18n');
         if (t[key] !== undefined) {
-            el.textContent = t[key]
+            el.textContent = t[key];
         }
-    })
-    document.documentElement.lang = lang
-}
+    });
+    document.documentElement.lang = lang;
+};
 
 const updateTyped = (lang) => {
     if (typedInstance) {
-        typedInstance.destroy()
+        typedInstance.destroy();
     }
     typedInstance = new Typed('#home-typed', {
         strings: translations[lang]['typed.strings'],
@@ -150,146 +204,249 @@ const updateTyped = (lang) => {
         backDelay: 2000,
         loop: true,
         cursorChar: '_',
-    })
-}
+    });
+};
 
 const setLang = (lang) => {
-    currentLang = lang
-    localStorage.setItem('selected-lang', lang)
-    applyTranslations(lang)
-    updateTyped(lang)
+    currentLang = lang;
+    localStorage.setItem('selected-lang', lang);
+    applyTranslations(lang);
+    updateTyped(lang);
 
-    // Sync ALL lang buttons across both switchers (desktop + mobile)
     document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.classList.toggle('active-lang', btn.getAttribute('data-lang') === lang)
-    })
-}
+        btn.classList.toggle('active-lang', btn.getAttribute('data-lang') === lang);
+    });
+};
 
-/*=============== SHOW MENU ===============*/
-const navMenu = document.getElementById('nav-menu'),
-    navToggle = document.getElementById('nav-toggle'),
-    navClose = document.getElementById('nav-close')
+/*=============== MOBILE MENU ===============*/
+const navMenu = document.getElementById('nav-menu');
+const navToggle = document.getElementById('nav-toggle');
+const navClose = document.getElementById('nav-close');
 
 if (navToggle) {
     navToggle.addEventListener('click', () => {
-        navMenu.classList.add('show-menu')
-    })
+        navMenu.classList.add('show-menu');
+        document.body.style.overflow = 'hidden';
+    });
 }
+
 if (navClose) {
     navClose.addEventListener('click', () => {
-        navMenu.classList.remove('show-menu')
-    })
+        navMenu.classList.remove('show-menu');
+        document.body.style.overflow = '';
+    });
 }
 
-/*=============== REMOVE MENU MOBILE ===============*/
-const navLink = document.querySelectorAll('.nav__link')
-const linkAction = () => {
-    const navMenu = document.getElementById('nav-menu')
-    navMenu.classList.remove('show-menu')
-}
-navLink.forEach(n => n.addEventListener('click', linkAction))
+const navLinks = document.querySelectorAll('.nav__link');
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('show-menu');
+        document.body.style.overflow = '';
+    });
+});
 
-/*=============== HOME TYPED JS (init via setLang) ===============*/
-// Typed is now initialised inside setLang()
-
-/*=============== ADD SHADOW HEADER ===============*/
+/*=============== HEADER SHADOW ===============*/
+const header = document.getElementById('header');
 const shadowHeader = () => {
-    const header = document.getElementById('header')
-    this.scrollY >= 50 ? header.classList.add('shadow-header') : header.classList.remove('shadow-header')
-}
-window.addEventListener('scroll', shadowHeader)
+    if (window.scrollY >= 50) {
+        header.classList.add('shadow-header');
+    } else {
+        header.classList.remove('shadow-header');
+    }
+};
+window.addEventListener('scroll', shadowHeader);
 
-/*=============== CONTACT EMAIL JS ===============*/
-const contactForm = document.getElementById('contact-form'),
-    contactMessage = document.getElementById('contact-message')
-const sendEmail = (e) => {
-    e.preventDefault()
-    emailjs.sendForm('service_aehzd58', 'template_gphnkq4', '#contact-form', 'atIWWnt_-mYRrXXOz')
-    contactMessage.textContent = translations[currentLang]['contact.success']
-    setTimeout(() => {
-        contactMessage.textContent = ''
-    }, 5000)
-    contactForm.reset()
-}
-contactForm.addEventListener('submit', sendEmail)
+/*=============== SCROLL UP ===============*/
+const scrollUp = document.getElementById('scroll-up');
+const showScrollUp = () => {
+    if (window.scrollY >= 350) {
+        scrollUp.classList.add('show-scroll');
+    } else {
+        scrollUp.classList.remove('show-scroll');
+    }
+};
+window.addEventListener('scroll', showScrollUp);
 
-/*=============== SHOW SCROLL UP ===============*/
-const scrollUp = () => {
-    const scrollUp = document.getElementById('scroll-up')
-    this.scrollY >= 350 ? scrollUp.classList.add('show-scroll') : scrollUp.classList.remove('show-scroll')
-}
-window.addEventListener('scroll', scrollUp)
-
-/*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
-const sections = document.querySelectorAll('section[id]')
+/*=============== ACTIVE LINK ON SCROLL ===============*/
+const sections = document.querySelectorAll('section[id]');
 const scrollActive = () => {
-    const scrollDown = window.scrollY
+    const scrollY = window.scrollY;
     sections.forEach(current => {
-        const sectionHeight = current.offsetHeight,
-            sectionTop = current.offsetTop - 58,
-            sectionId = current.getAttribute('id'),
-            sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
-        if (scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight) {
-            sectionsClass.classList.add('active-link')
+        const sectionHeight = current.offsetHeight;
+        const sectionTop = current.offsetTop - 100;
+        const sectionId = current.getAttribute('id');
+        const link = document.querySelector(`.nav__link[href*="${sectionId}"]`);
+
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            link?.classList.add('active-link');
         } else {
-            sectionsClass.classList.remove('active-link')
+            link?.classList.remove('active-link');
         }
-    })
+    });
+};
+window.addEventListener('scroll', scrollActive);
+
+/*=============== CONTACT FORM ===============*/
+const contactForm = document.getElementById('contact-form');
+const contactMessage = document.getElementById('contact-message');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        // Simulate form submission
+        contactMessage.textContent = translations[currentLang]['contact.success'];
+        contactMessage.style.color = 'var(--first-color)';
+
+        setTimeout(() => {
+            contactMessage.textContent = '';
+        }, 5000);
+
+        contactForm.reset();
+    });
 }
-window.addEventListener('scroll', scrollActive)
 
-/*=============== SCROLL REVEAL ANIMATION ===============*/
-const sr = ScrollReveal({
-    origin: 'top',
-    distance: '60px',
-    duration: 2000,
-})
-sr.reveal(`.home__content, .resume__content:nth-child(1), .footer__container`)
-sr.reveal(`.home__data, .resume__content:nth-child(2)`, { delay: 300, origin: 'bottom' })
-sr.reveal(`.about__content, .contact__content`, { origin: 'bottom' })
-sr.reveal(`.about__image, .contact__form`, { delay: 300 })
-sr.reveal(`.projects__card`, { interval: 100 })
+/*=============== THEME TOGGLE ===============*/
+const themeButton = document.getElementById('theme-button');
+const darkTheme = 'dark-theme';
+const iconTheme = 'ri-sun-line';
 
-/*=============== DARK LIGHT THEME ===============*/
-const themeButton = document.getElementById('theme-button')
-const darkTheme = 'dark-theme'
-const iconTheme = 'ri-sun-line'
-const selectedTheme = localStorage.getItem('selected-theme')
-const selectedIcon = localStorage.getItem('selected-icon')
-const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
-const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'ri-moon-line' : 'ri-sun-line'
+const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light';
+const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'ri-moon-line' : 'ri-sun-line';
+
+const selectedTheme = localStorage.getItem('selected-theme');
+const selectedIcon = localStorage.getItem('selected-icon');
+
 if (selectedTheme) {
-    document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
-    themeButton.classList[selectedIcon === 'ri-moon-line' ? 'add' : 'remove'](iconTheme)
+    document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme);
+    themeButton.classList[selectedIcon === 'ri-moon-line' ? 'add' : 'remove'](iconTheme);
 }
-themeButton.addEventListener('click', () => {
-    document.body.classList.toggle(darkTheme)
-    themeButton.classList.toggle(iconTheme)
-    localStorage.setItem('selected-theme', getCurrentTheme())
-    localStorage.setItem('selected-icon', getCurrentIcon())
-})
 
-/*=============== LANGUAGE SWITCHER EVENTS ===============*/
+if (themeButton) {
+    themeButton.addEventListener('click', () => {
+        document.body.classList.toggle(darkTheme);
+        themeButton.classList.toggle(iconTheme);
+        localStorage.setItem('selected-theme', getCurrentTheme());
+        localStorage.setItem('selected-icon', getCurrentIcon());
+
+        // Update icon
+        if (themeButton.classList.contains(iconTheme)) {
+            themeButton.classList.remove('ri-moon-line');
+            themeButton.classList.add('ri-sun-line');
+        } else {
+            themeButton.classList.remove('ri-sun-line');
+            themeButton.classList.add('ri-moon-line');
+        }
+    });
+}
+
+/*=============== LANGUAGE SWITCHER ===============*/
 document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.addEventListener('click', () => setLang(btn.getAttribute('data-lang')))
-})
+    btn.addEventListener('click', () => setLang(btn.getAttribute('data-lang')));
+});
 
-/*=============== INIT LANGUAGE ON PAGE LOAD ===============*/
-setLang(currentLang)
+/*=============== SCROLL REVEAL ===============*/
+const initScrollReveal = () => {
+    const sr = ScrollReveal({
+        origin: 'top',
+        distance: '40px',
+        duration: 1000,
+        delay: 100,
+        reset: false,
+    });
+
+    sr.reveal('.home__content, .section-header', { delay: 100 });
+    sr.reveal('.home__data', { delay: 200, origin: 'bottom' });
+    sr.reveal('.about__card, .skill-category', { interval: 100, origin: 'left' });
+    sr.reveal('.certification__card', { interval: 100, origin: 'bottom' });
+    sr.reveal('.project__card', { interval: 150, origin: 'bottom' });
+    sr.reveal('.timeline-item', { interval: 100, origin: 'left' });
+    sr.reveal('.contact__card', { interval: 100, origin: 'right' });
+    sr.reveal('.contact__form', { delay: 200, origin: 'bottom' });
+};
 
 /*=============== PARTICLES.JS ===============*/
-if (typeof particlesJS !== 'undefined') {
-    particlesJS.load('particles-js', 'assets/particles.json', function () {
-        console.log('Particles.js loaded');
-    });
-}
+const initParticles = () => {
+    if (typeof particlesJS !== 'undefined') {
+        particlesJS('particles-js', {
+            particles: {
+                number: {
+                    value: 60,
+                    density: { enable: true, value_area: 800 }
+                },
+                color: { value: '#00b8b8' },
+                shape: { type: 'circle' },
+                opacity: {
+                    value: 0.5,
+                    random: true
+                },
+                size: {
+                    value: 3,
+                    random: true
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: '#00b8b8',
+                    opacity: 0.3,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 1.5,
+                    direction: 'none',
+                    random: true,
+                    straight: false,
+                    out_mode: 'out'
+                }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: {
+                    onhover: { enable: true, mode: 'grab' },
+                    onclick: { enable: true, mode: 'push' },
+                    resize: true
+                },
+                modes: {
+                    grab: { distance: 140, line_linked: { opacity: 0.8 } },
+                    push: { particles_nb: 4 }
+                }
+            },
+            retina_detect: true
+        });
+    }
+};
 
 /*=============== VANILLA TILT ===============*/
-if (typeof VanillaTilt !== 'undefined') {
-    VanillaTilt.init(document.querySelectorAll(".projects__card"), {
-        max: 10,
-        speed: 400,
-        glare: true,
-        "max-glare": 0.3,
+const initVanillaTilt = () => {
+    if (typeof VanillaTilt !== 'undefined') {
+        VanillaTilt.init(document.querySelectorAll('[data-tilt]'), {
+            max: 8,
+            speed: 400,
+            glare: false,
+            scale: 1.02,
+        });
+    }
+};
+
+/*=============== SMOOTH SCROLL ===============*/
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
     });
-}
+});
+
+/*=============== INITIALIZATION ===============*/
+document.addEventListener('DOMContentLoaded', () => {
+    setLang(currentLang);
+    initScrollReveal();
+    initParticles();
+    initVanillaTilt();
+});
