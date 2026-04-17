@@ -1,5 +1,3 @@
-/*=============== CHATBOT WITH RICH INTERFACE RESPONSES ===============*/
-
 const chatBody = document.querySelector('.chat-body');
 const messageInput = document.querySelector('.message-input');
 const sendMessageButton = document.querySelector('#send-message');
@@ -7,6 +5,9 @@ const chatbotToggler = document.querySelector('#chatbot-toggler');
 const closeChatbot = document.querySelector('#close-chatbot');
 const clearChat = document.querySelector('#clear-chat');
 const emojiPicker = document.querySelector('#emoji-picker');
+
+// Backend API for intelligent responses
+const BACKEND_URL = "https://chatbot-server-g0jb.onrender.com";
 
 // Chat state
 let isTyping = false;
@@ -112,6 +113,87 @@ const showTyping = () => {
 const removeTyping = () => {
     const typingMsg = chatBody.querySelector('.typing-message');
     if (typingMsg) typingMsg.remove();
+};
+
+// Add bot message (supports both rich cards and plain text)
+const addBotMessage = (response) => {
+    let messageHTML;
+
+    if (response.type === 'rich') {
+        messageHTML = `
+            <img class="bot-avatar" src="assets/img/home-perfil.png" alt="Bot">
+            <div class="message-content">
+                <div class="message-text">
+                    ${response.content}
+                </div>
+                <span class="message-time">${getTimestamp()}</span>
+            </div>
+        `;
+    } else {
+        // Plain text response
+        messageHTML = `
+            <img class="bot-avatar" src="assets/img/home-perfil.png" alt="Bot">
+            <div class="message-content">
+                <div class="message-text">
+                    <p>${escapeHtml(response.text)}</p>
+                </div>
+                <span class="message-time">${getTimestamp()}</span>
+            </div>
+        `;
+    }
+
+    const messageDiv = createMessageElement(messageHTML, ['bot-message', 'rich-message']);
+    chatBody.appendChild(messageDiv);
+    chatBody.scrollTo({ top: chatBody.scrollHeight, behavior: 'smooth' });
+
+    // Save to history
+    messageHistory.push({ role: 'bot', content: response.text || response.content });
+};
+
+// Add user message
+const addUserMessage = (text) => {
+    const messageHTML = `
+        <div class="message-content">
+            <div class="message-text">${escapeHtml(text)}</div>
+            <span class="message-time">${getTimestamp()}</span>
+        </div>
+    `;
+
+    const messageDiv = createMessageElement(messageHTML, ['user-message']);
+    chatBody.appendChild(messageDiv);
+    chatBody.scrollTo({ top: chatBody.scrollHeight, behavior: 'smooth' });
+
+    // Save to history
+    messageHistory.push({ role: 'user', content: text });
+};
+
+// Escape HTML
+const escapeHtml = (text) => {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+};
+
+// Fetch intelligent response from Gemini API via backend
+const fetchIntelligentResponse = async (userMessage) => {
+    try {
+        const response = await fetch(BACKEND_URL, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ message: userMessage })
+        });
+
+        if (!response.ok) {
+            const errorData = await response.json();
+            throw new Error(errorData.error || "Server error");
+        }
+
+        const data = await response.json();
+        return data.reply;
+    } catch (error) {
+        console.error("Backend error:", error);
+        return "Sorry, I'm having trouble connecting to my brain right now. Please try again later! 🤖";
+    }
 };
 
 // Create rich skill card
@@ -278,8 +360,8 @@ const createGreetingCard = () => {
     `;
 };
 
-// Process user message and generate response
-const processMessage = (message) => {
+// Process user message - returns response object if known, null if needs AI
+const processLocalMessage = (message) => {
     const lowerMsg = message.toLowerCase();
 
     // Skills related
@@ -325,65 +407,15 @@ const processMessage = (message) => {
 
     // About the bot
     if (lowerMsg.includes('who are you') || lowerMsg.includes('your name') || lowerMsg.includes('bot')) {
-        return { type: 'text', text: "I'm Makhlouf's AI assistant! I can tell you about his skills, projects, experience, and help you get in touch with him." };
+        return { type: 'text', text: "I'm Makhlouf's AI assistant! I can tell you about his skills, projects, experience, and help you get in touch with him. Feel free to ask me anything!" };
     }
 
-    // Default response
-    return {
-        type: 'rich',
-        content: createGreetingCard(),
-        text: "I'm not sure I understand. Here are some things I can help you with:"
-    };
+    // Not a known query - need AI response
+    return null;
 };
 
-// Add bot message with rich content
-const addBotMessage = (response) => {
-    removeTyping();
-
-    const messageHTML = `
-        <img class="bot-avatar" src="assets/img/home-perfil.png" alt="Bot">
-        <div class="message-content">
-            <div class="message-text">
-                ${response.type === 'rich' ? response.content : response.text}
-            </div>
-            <span class="message-time">${getTimestamp()}</span>
-        </div>
-    `;
-
-    const messageDiv = createMessageElement(messageHTML, ['bot-message', 'rich-message']);
-    chatBody.appendChild(messageDiv);
-    chatBody.scrollTo({ top: chatBody.scrollHeight, behavior: 'smooth' });
-
-    // Save to history
-    messageHistory.push({ role: 'bot', content: response.text || response.content });
-};
-
-// Add user message
-const addUserMessage = (text) => {
-    const messageHTML = `
-        <div class="message-content">
-            <div class="message-text">${escapeHtml(text)}</div>
-            <span class="message-time">${getTimestamp()}</span>
-        </div>
-    `;
-
-    const messageDiv = createMessageElement(messageHTML, ['user-message']);
-    chatBody.appendChild(messageDiv);
-    chatBody.scrollTo({ top: chatBody.scrollHeight, behavior: 'smooth' });
-
-    // Save to history
-    messageHistory.push({ role: 'user', content: text });
-};
-
-// Escape HTML
-const escapeHtml = (text) => {
-    const div = document.createElement('div');
-    div.textContent = text;
-    return div.innerHTML;
-};
-
-// Handle outgoing message
-const handleOutgoingMessage = (e) => {
+// Handle outgoing message (main entry point)
+const handleOutgoingMessage = async (e) => {
     e.preventDefault();
 
     const message = messageInput.value.trim();
@@ -394,15 +426,31 @@ const handleOutgoingMessage = (e) => {
     messageInput.value = '';
     messageInput.style.height = 'auto';
 
-    // Show typing and generate response
-    isTyping = true;
-    const typing = showTyping();
+    // Check if local knowledge can handle it
+    const localResponse = processLocalMessage(message);
 
-    setTimeout(() => {
-        const response = processMessage(message);
-        addBotMessage(response);
+    if (localResponse) {
+        // Use local rich response
+        isTyping = true;
+        const typing = showTyping();
+
+        setTimeout(() => {
+            removeTyping();
+            addBotMessage(localResponse);
+            isTyping = false;
+        }, 600);
+    } else {
+        // Need intelligent response from AI
+        isTyping = true;
+        const typing = showTyping();
+
+        // Fetch response from backend
+        const aiResponse = await fetchIntelligentResponse(message);
+
+        removeTyping();
+        addBotMessage({ type: 'text', text: aiResponse });
         isTyping = false;
-    }, 800 + Math.random() * 500);
+    }
 };
 
 // Close chat and scroll to section
@@ -535,4 +583,3 @@ document.addEventListener('keydown', (e) => {
         document.body.classList.remove('show-chatbot');
     }
 });
-

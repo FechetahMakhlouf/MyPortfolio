@@ -35,6 +35,26 @@
   transform: rotate(-90deg);
 }
 
+#clear-chat {
+  background: rgba(255, 100, 100, 0.2);
+  color: #ff6b6b;
+}
+
+#clear-chat:hover {
+  background: rgba(255, 100, 100, 0.4);
+  color: #ff4444;
+}
+
+#close-chatbot {
+  background: rgba(100, 100, 100, 0.2);
+  color: #cccccc;
+}
+
+#close-chatbot:hover {
+  background: rgba(100, 100, 100, 0.4);
+  color: #ffffff;
+}
+
 body.show-chatbot #chatbot-toggler .chatbot-icon {
   opacity: 0;
   transform: rotate(90deg);
@@ -114,7 +134,7 @@ body.show-chatbot .chatbot-popup {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 1.25rem;
+  padding: 0.75rem 1rem;
   background: linear-gradient(135deg, var(--first-color), var(--first-color-light));
 }
 
@@ -126,8 +146,8 @@ body.show-chatbot .chatbot-popup {
 
 .chatbot-avatar {
   position: relative;
-  width: 44px;
-  height: 44px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   overflow: hidden;
   border: 2px solid rgba(255, 255, 255, 0.3);
@@ -164,9 +184,9 @@ body.show-chatbot .chatbot-popup {
 }
 
 .header-text h2 {
-  font-size: var(--normal-font-size);
   color: var(--text-color);
   font-weight: var(--font-semi-bold);
+  font-size: 1rem;
 }
 
 .status-text {
@@ -180,8 +200,9 @@ body.show-chatbot .chatbot-popup {
 }
 
 .header-btn {
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
+  font-size: 1.1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -189,7 +210,6 @@ body.show-chatbot .chatbot-popup {
   border: none;
   border-radius: 10px;
   color: var(--white-color);
-  font-size: 1.25rem;
   cursor: pointer;
   transition: all var(--transition-fast);
 }
@@ -431,6 +451,7 @@ body.show-chatbot .chatbot-popup {
   margin-bottom: 0.5rem;
   display: -webkit-box;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -853,5 +874,16 @@ body.show-chatbot .chatbot-popup {
   .chatbot-popup {
     width: 100%;
     max-width: 400px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body.show-chatbot .chatbot-popup {
+    height: 650px;
+    /* Au lieu de 550px */
+    max-height: 85vh;
+    /* Évite de dépasser l'écran */
+    bottom: 1rem;
+    /* Descendre plus bas (était 5.5rem) */
   }
 }

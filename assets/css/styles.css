@@ -1465,6 +1465,10 @@ img {
   background: var(--gray-color);
 }
 
+body.show-chatbot #chatbot-toggler {
+  display: none;
+}
+
 /*=============== RESPONSIVE ===============*/
 /* Small devices (phones, 320px and up) */
 @media screen and (min-width: 320px) {
