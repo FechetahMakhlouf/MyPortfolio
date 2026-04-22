@@ -37,11 +37,15 @@ const knowledgeBase = {
         },
         {
             name: 'CFPA Website',
-            desc: 'Professional training center management',
+            desc: 'Professional training center management (collab with Omar Ferradj)',
             tech: ['Django', 'HTML/CSS', 'PostgreSQL'],
             image: 'assets/img/project-2.jpeg',
             demo: '#',
-            code: 'https://github.com/FechetahMakhlouf'
+            code: 'https://github.com/FechetahMakhlouf',
+            collaborator: {
+                name: 'Omar Ferradj',
+                url: 'https://omarfrj.vercel.app/'
+            }
         },
         {
             name: 'Jadwal App',
@@ -233,6 +237,7 @@ const createProjectCards = () => {
             <div class="project-mini-info">
                 <h5>${project.name}</h5>
                 <p>${project.desc}</p>
+                ${project.collaborator ? `<div class="collab-info"><i class="ri-user-star-line"></i> with <a href="${project.collaborator.url}" target="_blank">${project.collaborator.name}</a></div>` : ''}
                 <div class="project-mini-links">
                     <a href="${project.code}" target="_blank"><i class="ri-github-fill"></i> Code</a>
                     ${project.demo !== '#' ? `<a href="${project.demo}" target="_blank"><i class="ri-external-link-line"></i> Live</a>` : ''}

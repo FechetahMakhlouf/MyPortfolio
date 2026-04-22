@@ -1415,6 +1415,25 @@ img {
   color: #ef4444;
 }
 
+.project__collab {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--small-font-size);
+  color: var(--gray-color);
+  margin-bottom: 1rem;
+}
+
+.collab-link {
+  color: var(--first-color);
+  font-weight: var(--font-medium);
+  transition: color var(--transition-fast);
+}
+
+.collab-link:hover {
+  text-decoration: underline;
+}
+
 /*=============== SCROLL UP ===============*/
 .scrollup {
   position: fixed;

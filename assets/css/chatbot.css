@@ -128,6 +128,21 @@ body.show-chatbot .chatbot-popup {
   transform: translateY(0) scale(1);
 }
 
+.collab-info {
+  font-size: 0.75rem;
+  color: var(--gray-color);
+  margin: 4px 0;
+}
+
+.collab-info a {
+  color: var(--first-color);
+  text-decoration: none;
+}
+
+.collab-info a:hover {
+  text-decoration: underline;
+}
+
 /* Chat Header */
 .chat-header {
   flex-shrink: 0;
