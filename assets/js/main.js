@@ -7,7 +7,7 @@ const translations = {
         'nav.resume': 'Resume',
         'nav.contact': 'Contact',
 
-        'home.available': 'Currently working : not available at the moment',
+        'home.available': 'Currently working',
         'home.greeting': "Hi, I'm a",
         'home.description': "Master's student in Artificial Intelligence at the University of Bouira, Algeria. Python developer with a strong passion for web development, data science, and AI.",
         'home.stats.projects': 'Projects',
@@ -96,7 +96,7 @@ const translations = {
         'nav.resume': 'CV',
         'nav.contact': 'Contact',
 
-        'home.available': 'Occupé : pas disponible pour le moment',
+        'home.available': 'Occupé pour le moment',
         'home.greeting': "Bonjour, je suis",
         'home.description': "Étudiant en Master d'Intelligence Artificielle à l'Université de Bouira, Algérie. Développeur Python passionné par le développement web, la science des données et l'IA.",
         'home.stats.projects': 'Projets',
