@@ -45,6 +45,8 @@ const translations = {
         'project3.desc': 'Weekly schedule management with automatic planning generation and task tracking.',
         'project4.title': 'Cat vs Non-Cat Detector',
         'project4.desc': 'Neural Network classifier to detect cats in images with data augmentation pipeline.',
+        'project5.title': 'E-Scoot Algeria',
+        'project5.desc': 'Multilingual showcase website (FR/EN/AR) for an Algerian electric vehicle retailer, featuring a filterable product catalogue, lightbox gallery, WhatsApp ordering, and dark/light mode.',
 
         'resume.subtitle': 'My journey',
         'resume.title': 'Resume',
@@ -134,6 +136,8 @@ const translations = {
         'project3.desc': "Gestion d'emplois du temps hebdomadaires avec génération automatique de plannings.",
         'project4.title': 'Détecteur Chat / Non-Chat',
         'project4.desc': "Classificateur réseau de neurones pour détecter les chats dans des images.",
+        'project5.title': 'E-Scoot Algérie',
+        'project5.desc': "Site vitrine multilingue (FR/EN/AR) pour un revendeur algérien de véhicules électriques, avec catalogue filtrable, galerie lightbox, commande WhatsApp et mode sombre/clair.",
 
         'resume.subtitle': 'Mon parcours',
         'resume.title': 'Curriculum Vitae',
