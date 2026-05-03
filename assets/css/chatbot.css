@@ -902,3 +902,161 @@ body.show-chatbot .chatbot-popup {
     /* Descendre plus bas (était 5.5rem) */
   }
 }
+
+/*=============== CHATBOT MOBILE IMPROVEMENTS ===============*/
+
+/* Full-screen chatbot on small phones with safe area support */
+@media screen and (max-width: 480px) {
+  .chatbot-popup {
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    border-radius: 0;
+    /* Slide up instead of scale */
+    transform: translateY(100%);
+    transform-origin: bottom center;
+  }
+
+  body.show-chatbot .chatbot-popup {
+    transform: translateY(0);
+  }
+
+  /* Safe area padding for notched phones */
+  .chat-header {
+    padding-top: calc(0.875rem + env(safe-area-inset-top));
+  }
+
+  .chat-footer {
+    padding-bottom: calc(0.875rem + env(safe-area-inset-bottom));
+  }
+
+  /* Larger avatar for better visibility */
+  .chatbot-avatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Bigger touch targets for header buttons */
+  .header-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  /* Larger send button on mobile */
+  .send-btn {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+  }
+
+  /* Bigger action button */
+  .action-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  /* Quick action buttons: wrap better on small screens */
+  .quick-actions {
+    gap: 0.375rem;
+  }
+
+  .quick-action-btn {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.7rem;
+  }
+
+  /* Emoji grid: fewer columns on mobile */
+  .emoji-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  /* Message max width */
+  .message {
+    max-width: 95%;
+  }
+
+  /* Skill grid: single column on mobile */
+  .skill-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mid-size phones (481px–575px) — popup from bottom, partial height */
+@media screen and (min-width: 481px) and (max-width: 575px) {
+  .chatbot-popup {
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 100%;
+    height: 85vh;
+    max-height: 85vh;
+    border-radius: 20px 20px 0 0;
+    transform: translateY(100%);
+    transform-origin: bottom center;
+  }
+
+  body.show-chatbot .chatbot-popup {
+    transform: translateY(0);
+  }
+
+  .chat-footer {
+    padding-bottom: calc(0.875rem + env(safe-area-inset-bottom));
+  }
+}
+
+/* Adjust toggler position to not overlap with nav on landscape */
+@media screen and (max-width: 767px) {
+
+  /* Ensure textarea doesn't trigger zoom on iOS */
+  .message-input {
+    font-size: 1rem !important;
+  }
+
+  /* Prevent message input from shrinking too much */
+  .input-container {
+    min-height: 48px;
+  }
+
+  .message-input {
+    min-height: 28px;
+    padding-block: 0.375rem;
+  }
+}
+
+/* Landscape mobile: chatbot takes more height */
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  .chatbot-popup {
+    height: 100%;
+    max-height: 100%;
+    bottom: 0;
+    border-radius: 0;
+  }
+
+  .chat-header {
+    padding-top: calc(0.75rem + env(safe-area-inset-top));
+    padding-left: calc(1rem + env(safe-area-inset-left));
+    padding-right: calc(1rem + env(safe-area-inset-right));
+  }
+
+  .chat-footer {
+    padding-left: calc(1.25rem + env(safe-area-inset-left));
+    padding-right: calc(1.25rem + env(safe-area-inset-right));
+    padding-bottom: calc(0.875rem + env(safe-area-inset-bottom));
+  }
+}
+
+/* Touch devices: disable hover-only effects */
+@media (hover: none) {
+
+  .quick-action-btn:hover,
+  .link-btn:hover,
+  .suggested-question:hover {
+    transform: none;
+  }
+}
