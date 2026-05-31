@@ -1,738 +1,1047 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-   <meta charset="UTF-8">
-   <!-- viewport: cover entire screen, respect safe areas, allow user zoom -->
-   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-   <!-- PWA / Mobile app appearance -->
-   <meta name="mobile-web-app-capable" content="yes">
-   <meta name="apple-mobile-web-app-capable" content="yes">
-   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-   <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)">
-   <meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)">
-   <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
-   <link rel="stylesheet" href="assets/css/styles.css">
-   <link rel="stylesheet" href="assets/css/chatbot.css">
-   <link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0">
-   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WN4T85DMVT"></script>
-   <script>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- viewport: cover entire screen, respect safe areas, allow user zoom -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <!-- PWA / Mobile app appearance -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta
+      name="theme-color"
+      content="#0a0a0a"
+      media="(prefers-color-scheme: dark)"
+    />
+    <meta
+      name="theme-color"
+      content="#f8fafc"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      rel="shortcut icon"
+      href="assets/img/favicon.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/chatbot.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0"
+    />
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-WN4T85DMVT"
+    ></script>
+    <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag('js', new Date());
-      gtag('config', 'G-WN4T85DMVT');
-   </script>
-   <title>Makhlouf Fechetah</title>
-   <meta name="description" content="Portfolio of Makhlouf Fechetah - AI Engineering Student, Python & Web Developer">
-</head>
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-WN4T85DMVT");
+    </script>
+    <title>Makhlouf Fechetah</title>
+    <meta
+      name="description"
+      content="Portfolio of Makhlouf Fechetah - AI Engineering Student, Python & Web Developer"
+    />
+  </head>
 
-<body>
-   <!-- Particles background -->
-   <div id="particles-js"></div>
+  <body>
+    <!-- Particles background -->
+    <div id="particles-js"></div>
 
-   <!-- Header -->
-   <header class="header" id="header">
+    <!-- Header -->
+    <header class="header" id="header">
       <nav class="nav container">
-         <!-- Language switcher -->
-         <div class="lang-switcher" title="Switch language">
-            <button class="lang-btn active-lang" data-lang="en">EN</button>
-            <div class="lang-divider"></div>
-            <button class="lang-btn" data-lang="fr">FR</button>
-         </div>
+        <!-- Language switcher -->
+        <div class="lang-switcher" title="Switch language">
+          <button class="lang-btn active-lang" data-lang="en">EN</button>
+          <div class="lang-divider"></div>
+          <button class="lang-btn" data-lang="fr">FR</button>
+        </div>
 
-         <div class="nav__menu" id="nav-menu">
-            <ul class="nav__list">
-               <li><a href="#home" class="nav__link active-link" data-i18n="nav.home"><i class="ri-home-5-line"></i>
-                     <span>Home</span></a></li>
-               <li><a href="#about" class="nav__link" data-i18n="nav.about"><i class="ri-user-3-line"></i>
-                     <span>About</span></a></li>
-               <li><a href="#projects" class="nav__link" data-i18n="nav.projects"><i class="ri-folder-3-line"></i>
-                     <span>Projects</span></a></li>
-               <li><a href="#resume" class="nav__link" data-i18n="nav.resume"><i class="ri-file-list-3-line"></i>
-                     <span>Resume</span></a></li>
-               <li><a href="#contact" class="nav__link" data-i18n="nav.contact"><i class="ri-mail-line"></i>
-                     <span>Contact</span></a></li>
-            </ul>
-            <div class="nav__close" id="nav-close"><i class="ri-close-large-line"></i></div>
-         </div>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li>
+              <a href="#home" class="nav__link active-link" data-i18n="nav.home"
+                ><i class="ri-home-5-line"></i> <span>Home</span></a
+              >
+            </li>
+            <li>
+              <a href="#about" class="nav__link" data-i18n="nav.about"
+                ><i class="ri-user-3-line"></i> <span>About</span></a
+              >
+            </li>
+            <li>
+              <a href="#projects" class="nav__link" data-i18n="nav.projects"
+                ><i class="ri-folder-3-line"></i> <span>Projects</span></a
+              >
+            </li>
+            <li>
+              <a href="#resume" class="nav__link" data-i18n="nav.resume"
+                ><i class="ri-file-list-3-line"></i> <span>Resume</span></a
+              >
+            </li>
+            <li>
+              <a href="#contact" class="nav__link" data-i18n="nav.contact"
+                ><i class="ri-mail-line"></i> <span>Contact</span></a
+              >
+            </li>
+          </ul>
+          <div class="nav__close" id="nav-close">
+            <i class="ri-close-large-line"></i>
+          </div>
+        </div>
 
-         <div class="nav__actions">
-            <i class="ri-moon-line change-theme" id="theme-button"></i>
-         </div>
+        <div class="nav__actions">
+          <i class="ri-moon-line change-theme" id="theme-button"></i>
+        </div>
 
-         <div class="nav__toggle" id="nav-toggle"><i class="ri-menu-line"></i></div>
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="ri-menu-line"></i>
+        </div>
       </nav>
-   </header>
+    </header>
 
-   <main class="main">
+    <main class="main">
       <!-- HOME SECTION -->
       <section class="home section" id="home">
-         <div class="home__container container">
-            <div class="home__content">
-               <div class="home__image-wrapper">
-                  <div class="home__image floating">
-                     <img src="assets/img/home-perfil.png" alt="Makhlouf Fechetah" class="home__img">
-                  </div>
-                  <div class="home__social">
-                     <a href="https://www.linkedin.com/in/makhlouf-fechetah-2b1085332" target="_blank"
-                        class="home__link" title="LinkedIn">
-                        <i class="ri-linkedin-box-fill"></i>
-                     </a>
-                     <a href="https://github.com/FechetahMakhlouf" target="_blank" class="home__link" title="GitHub">
-                        <i class="ri-github-fill"></i>
-                     </a>
-                  </div>
-               </div>
+        <div class="home__container container">
+          <div class="home__content">
+            <div class="home__image-wrapper">
+              <div class="home__image floating">
+                <img
+                  src="assets/img/home-perfil.png"
+                  alt="Makhlouf Fechetah"
+                  class="home__img"
+                />
+              </div>
+              <div class="home__social">
+                <a
+                  href="https://www.linkedin.com/in/makhlouf-fechetah-2b1085332"
+                  target="_blank"
+                  class="home__link"
+                  title="LinkedIn"
+                >
+                  <i class="ri-linkedin-box-fill"></i>
+                </a>
+                <a
+                  href="https://github.com/FechetahMakhlouf"
+                  target="_blank"
+                  class="home__link"
+                  title="GitHub"
+                >
+                  <i class="ri-github-fill"></i>
+                </a>
+              </div>
             </div>
-            <div class="home__data">
-               <div class="home__badge">
-                  <i class="ri-award-fill"></i>
-                  <span data-i18n="home.available">Available for work</span>
-               </div>
-               <p class="home__subtitle"><span data-i18n="home.greeting">Hi, I'm a</span> <span id="home-typed"></span>
-               </p>
-               <h1 class="home__title">Fechetah <span class="highlight">Makhlouf</span></h1>
-               <p class="home__description" data-i18n="home.description">
-                  Master's student in Artificial Intelligence at the University of Bouira, Algeria.
-                  Python developer with a strong passion for web development, data science, and AI.
-               </p>
-               <div class="home__stats">
-                  <div class="stat-item">
-                     <span class="stat-number">10+</span>
-                     <span class="stat-label" data-i18n="home.stats.projects">Projects</span>
-                  </div>
-                  <div class="stat-item">
-                     <span class="stat-number">5+</span>
-                     <span class="stat-label" data-i18n="home.stats.certs">Certifications</span>
-                  </div>
-               </div>
-               <div class="home__buttons">
-                  <a href="assets/img/CV.png" download target="_blank" class="button button-primary">
-                     <i class="ri-download-line"></i>
-                     <span data-i18n="home.cv">Download CV</span>
-                  </a>
-                  <a href="#projects" class="button button-ghost">
-                     <i class="ri-eye-line"></i>
-                     <span data-i18n="home.projects">View Projects</span>
-                  </a>
-               </div>
+          </div>
+          <div class="home__data">
+            <div class="home__badge">
+              <i class="ri-award-fill"></i>
+              <span data-i18n="home.available">Available for work</span>
             </div>
-         </div>
+            <p class="home__subtitle">
+              <span data-i18n="home.greeting">Hi, I'm a</span>
+              <span id="home-typed"></span>
+            </p>
+            <h1 class="home__title">
+              Fechetah <span class="highlight">Makhlouf</span>
+            </h1>
+            <p class="home__description" data-i18n="home.description">
+              Master's student in Artificial Intelligence at the University of
+              Bouira, Algeria. Python developer with a strong passion for web
+              development, data science, and AI.
+            </p>
+            <div class="home__stats">
+              <div class="stat-item">
+                <span class="stat-number">10+</span>
+                <span class="stat-label" data-i18n="home.stats.projects"
+                  >Projects</span
+                >
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">5+</span>
+                <span class="stat-label" data-i18n="home.stats.certs"
+                  >Certifications</span
+                >
+              </div>
+            </div>
+            <div class="home__buttons">
+              <a
+                href="assets/img/CV.png"
+                download
+                target="_blank"
+                class="button button-primary"
+              >
+                <i class="ri-download-line"></i>
+                <span data-i18n="home.cv">Download CV</span>
+              </a>
+              <a href="#projects" class="button button-ghost">
+                <i class="ri-eye-line"></i>
+                <span data-i18n="home.projects">View Projects</span>
+              </a>
+            </div>
+          </div>
+        </div>
       </section>
 
       <!-- ABOUT SECTION -->
       <section class="about section" id="about">
-         <div class="section-header">
-            <span class="section__subtitle" data-i18n="about.subtitle">Get to know me</span>
-            <h2 class="section__title" data-i18n="about.title">About Me</h2>
-         </div>
+        <div class="section-header">
+          <span class="section__subtitle" data-i18n="about.subtitle"
+            >Get to know me</span
+          >
+          <h2 class="section__title" data-i18n="about.title">About Me</h2>
+        </div>
 
-         <div class="about__container container">
-            <div class="about__content">
-               <div class="about__card">
-                  <div class="about__icon"><i class="ri-user-star-line"></i></div>
-                  <h3 data-i18n="about.whoami">Who am I?</h3>
-                  <p class="about__description" data-i18n="about.description">
-                     I'm a computer science student specialising in Information Systems and Artificial Intelligence.
-                     I've built a solid foundation in Python, web development, databases, and machine learning.
-                  </p>
-               </div>
-
-               <div class="about__card">
-                  <div class="about__icon"><i class="ri-rocket-line"></i></div>
-                  <h3 data-i18n="about.mission">My Mission</h3>
-                  <p class="about__description" data-i18n="about.missionText">
-                     I love turning ideas into code and continuously improving through real-world projects.
-                     Currently pursuing the Deep Learning Specialisation to master CNNs, RNNs, and Transformers.
-                  </p>
-               </div>
+        <div class="about__container container">
+          <div class="about__content">
+            <div class="about__card">
+              <div class="about__icon"><i class="ri-user-star-line"></i></div>
+              <h3 data-i18n="about.whoami">Who am I?</h3>
+              <p class="about__description" data-i18n="about.description">
+                I'm a computer science student specialising in Information
+                Systems and Artificial Intelligence. I've built a solid
+                foundation in Python, web development, databases, and machine
+                learning.
+              </p>
             </div>
 
-            <div class="about__skills">
-               <h3 class="about__subtitle"><i class="ri-tools-fill"></i> <span data-i18n="about.skills">Technical
-                     Skills</span></h3>
-               <div class="skills__grid">
-                  <div class="skill-category">
-                     <h4><i classri-code-box-line></i> Frontend</h4>
-                     <div class="skill-tags">
-                        <span class="skill-tag"><i class="ri-html5-fill"></i> HTML5</span>
-                        <span class="skill-tag"><i class="ri-css3-fill"></i> CSS3</span>
-                        <span class="skill-tag"><i class="ri-javascript-fill"></i> JavaScript</span>
-                     </div>
-                  </div>
-                  <div class="skill-category">
-                     <h4><i class="ri-server-line"></i> Backend</h4>
-                     <div class="skill-tags">
-                        <span class="skill-tag"><i class="ri-code-fill"></i> Python</span>
-                        <span class="skill-tag"><i class="ri-global-fill"></i> Django</span>
-                        <span class="skill-tag"><i class="ri-flask-fill"></i> Flask</span>
-                     </div>
-                  </div>
-                  <div class="skill-category">
-                     <h4><i class="ri-database-2-line"></i> Data & AI</h4>
-                     <div class="skill-tags">
-                        <span class="skill-tag"><i class="ri-database-2-fill"></i> SQL</span>
-                        <span class="skill-tag"><i class="ri-robot-fill"></i> ML/Scikit</span>
-                        <span class="skill-tag"><i class="ri-brain-fill"></i> Deep Learning</span>
-                     </div>
-                  </div>
-                  <div class="skill-category">
-                     <h4><i class="ri-git-branch-line"></i> Tools</h4>
-                     <div class="skill-tags">
-                        <span class="skill-tag"><i class="ri-github-fill"></i> Git/GitHub</span>
-                        <span class="skill-tag"><i class="ri-bar-chart-2-fill"></i> Data Analysis</span>
-                     </div>
-                  </div>
-               </div>
+            <div class="about__card">
+              <div class="about__icon"><i class="ri-rocket-line"></i></div>
+              <h3 data-i18n="about.mission">My Mission</h3>
+              <p class="about__description" data-i18n="about.missionText">
+                I love turning ideas into code and continuously improving
+                through real-world projects. Currently pursuing the Deep
+                Learning Specialisation to master CNNs, RNNs, and Transformers.
+              </p>
             </div>
-         </div>
+          </div>
 
-         <!-- Certifications -->
-         <div class="certifications__section">
-            <h3 class="about__subtitle certif-title"><i class="ri-award-line"></i> <span
-                  data-i18n="about.certifications">Certifications</span></h3>
-            <div class="certifications__grid container">
-               <div class="certification__card" data-tilt>
-                  <div class="certification__image">
-                     <img src="assets/img/cert-coursera.png" alt="Neural Networks Certificate">
-                  </div>
-                  <div class="certification__content">
-                     <div class="certification__icon"><i class="ri-brain-fill"></i></div>
-                     <h4 data-i18n="cert.coursera">Neural Networks & Deep Learning</h4>
-                     <span class="certification__issuer">Coursera - DeepLearning.AI</span>
-                     <a href="assets/pdf/Coursera Certificate_1.pdf" class="certification__link"><i
-                           class="ri-download-line"></i> <span data-i18n="cert.download">Download</span></a>
-                  </div>
-               </div>
-
-               <div class="certification__card" data-tilt>
-                  <div class="certification__image">
-                     <img src="assets/img/cert-python.jpg" alt="Python Certificate">
-                  </div>
-                  <div class="certification__content">
-                     <div class="certification__icon"><i class="ri-code-fill"></i></div>
-                     <h4 data-i18n="cert.python">Complete Python Mastery</h4>
-                     <span class="certification__issuer">CodeWithMosh</span>
-                     <a href="assets/pdf/Python Certificate.pdf" class="certification__link"><i
-                           class="ri-download-line"></i> <span data-i18n="cert.download">Download</span></a>
-                  </div>
-               </div>
-
-               <div class="certification__card" data-tilt>
-                  <div class="certification__image">
-                     <img src="assets/img/cert-git.jpg" alt="Git Certificate">
-                  </div>
-                  <div class="certification__content">
-                     <div class="certification__icon"><i class="ri-git-branch-fill"></i></div>
-                     <h4 data-i18n="cert.git">Complete Git & GitHub</h4>
-                     <span class="certification__issuer">CodeWithMosh</span>
-                     <a href="assets/pdf/Git Certificate.pdf" class="certification__link"><i
-                           class="ri-download-line"></i> <span data-i18n="cert.download">Download</span></a>
-                  </div>
-               </div>
-
-               <div class="certification__card" data-tilt>
-                  <div class="certification__image">
-                     <img src="assets/img/cert-sql.jpg" alt="SQL Certificate">
-                  </div>
-                  <div class="certification__content">
-                     <div class="certification__icon"><i class="ri-database-2-fill"></i></div>
-                     <h4 data-i18n="cert.sql">Complete SQL Mastery</h4>
-                     <span class="certification__issuer">CodeWithMosh</span>
-                     <a href="assets/pdf/SQL Certificate.pdf" class="certification__link"><i
-                           class="ri-download-line"></i> <span data-i18n="cert.download">Download</span></a>
-                  </div>
-               </div>
-
-               <div class="certification__card" data-tilt>
-                  <div class="certification__image">
-                     <img src="assets/img/cert-gemini.jpg" alt="Gemini Certificate">
-                  </div>
-                  <div class="certification__content">
-                     <div class="certification__icon"><i class="ri-google-fill"></i></div>
-                     <h4 data-i18n="cert.gemini">Google Gemini Certificate</h4>
-                     <span class="certification__issuer">Google</span>
-                     <a href="assets/pdf/Gemini Certificate.pdf" class="certification__link"><i
-                           class="ri-download-line"></i> <span data-i18n="cert.download">Download</span></a>
-                  </div>
-               </div>
+          <div class="about__skills">
+            <h3 class="about__subtitle">
+              <i class="ri-tools-fill"></i>
+              <span data-i18n="about.skills">Technical Skills</span>
+            </h3>
+            <div class="skills__grid">
+              <div class="skill-category">
+                <h4><i classri-code-box-line></i> Frontend</h4>
+                <div class="skill-tags">
+                  <span class="skill-tag"
+                    ><i class="ri-html5-fill"></i> HTML5</span
+                  >
+                  <span class="skill-tag"
+                    ><i class="ri-css3-fill"></i> CSS3</span
+                  >
+                  <span class="skill-tag"
+                    ><i class="ri-javascript-fill"></i> JavaScript</span
+                  >
+                </div>
+              </div>
+              <div class="skill-category">
+                <h4><i class="ri-server-line"></i> Backend</h4>
+                <div class="skill-tags">
+                  <span class="skill-tag"
+                    ><i class="ri-code-fill"></i> Python</span
+                  >
+                  <span class="skill-tag"
+                    ><i class="ri-global-fill"></i> Django</span
+                  >
+                  <span class="skill-tag"
+                    ><i class="ri-flask-fill"></i> Flask</span
+                  >
+                </div>
+              </div>
+              <div class="skill-category">
+                <h4><i class="ri-database-2-line"></i> Data & AI</h4>
+                <div class="skill-tags">
+                  <span class="skill-tag"
+                    ><i class="ri-database-2-fill"></i> SQL</span
+                  >
+                  <span class="skill-tag"
+                    ><i class="ri-robot-fill"></i> ML/Scikit</span
+                  >
+                  <span class="skill-tag"
+                    ><i class="ri-brain-fill"></i> Deep Learning</span
+                  >
+                </div>
+              </div>
+              <div class="skill-category">
+                <h4><i class="ri-git-branch-line"></i> Tools</h4>
+                <div class="skill-tags">
+                  <span class="skill-tag"
+                    ><i class="ri-github-fill"></i> Git/GitHub</span
+                  >
+                  <span class="skill-tag"
+                    ><i class="ri-bar-chart-2-fill"></i> Data Analysis</span
+                  >
+                </div>
+              </div>
             </div>
-         </div>
+          </div>
+        </div>
+
+        <!-- Certifications -->
+        <div class="certifications__section">
+          <h3 class="about__subtitle certif-title">
+            <i class="ri-award-line"></i>
+            <span data-i18n="about.certifications">Certifications</span>
+          </h3>
+          <div class="certifications__grid container">
+            <div class="certification__card" data-tilt>
+              <div class="certification__image">
+                <img
+                  src="assets/img/cert-coursera.png"
+                  alt="Neural Networks Certificate"
+                />
+              </div>
+              <div class="certification__content">
+                <div class="certification__icon">
+                  <i class="ri-brain-fill"></i>
+                </div>
+                <h4 data-i18n="cert.coursera">
+                  Neural Networks & Deep Learning
+                </h4>
+                <span class="certification__issuer"
+                  >Coursera - DeepLearning.AI</span
+                >
+                <a
+                  href="assets/pdf/Coursera Certificate_1.pdf"
+                  class="certification__link"
+                  ><i class="ri-download-line"></i>
+                  <span data-i18n="cert.download">Download</span></a
+                >
+              </div>
+            </div>
+
+            <div class="certification__card" data-tilt>
+              <div class="certification__image">
+                <img
+                  src="assets/img/cert-python.jpg"
+                  alt="Python Certificate"
+                />
+              </div>
+              <div class="certification__content">
+                <div class="certification__icon">
+                  <i class="ri-code-fill"></i>
+                </div>
+                <h4 data-i18n="cert.python">Complete Python Mastery</h4>
+                <span class="certification__issuer">CodeWithMosh</span>
+                <a
+                  href="assets/pdf/Python Certificate.pdf"
+                  class="certification__link"
+                  ><i class="ri-download-line"></i>
+                  <span data-i18n="cert.download">Download</span></a
+                >
+              </div>
+            </div>
+
+            <div class="certification__card" data-tilt>
+              <div class="certification__image">
+                <img src="assets/img/cert-git.jpg" alt="Git Certificate" />
+              </div>
+              <div class="certification__content">
+                <div class="certification__icon">
+                  <i class="ri-git-branch-fill"></i>
+                </div>
+                <h4 data-i18n="cert.git">Complete Git & GitHub</h4>
+                <span class="certification__issuer">CodeWithMosh</span>
+                <a
+                  href="assets/pdf/Git Certificate.pdf"
+                  class="certification__link"
+                  ><i class="ri-download-line"></i>
+                  <span data-i18n="cert.download">Download</span></a
+                >
+              </div>
+            </div>
+
+            <div class="certification__card" data-tilt>
+              <div class="certification__image">
+                <img src="assets/img/cert-sql.jpg" alt="SQL Certificate" />
+              </div>
+              <div class="certification__content">
+                <div class="certification__icon">
+                  <i class="ri-database-2-fill"></i>
+                </div>
+                <h4 data-i18n="cert.sql">Complete SQL Mastery</h4>
+                <span class="certification__issuer">CodeWithMosh</span>
+                <a
+                  href="assets/pdf/SQL Certificate.pdf"
+                  class="certification__link"
+                  ><i class="ri-download-line"></i>
+                  <span data-i18n="cert.download">Download</span></a
+                >
+              </div>
+            </div>
+
+            <div class="certification__card" data-tilt>
+              <div class="certification__image">
+                <img
+                  src="assets/img/cert-gemini.jpg"
+                  alt="Gemini Certificate"
+                />
+              </div>
+              <div class="certification__content">
+                <div class="certification__icon">
+                  <i class="ri-google-fill"></i>
+                </div>
+                <h4 data-i18n="cert.gemini">Google Gemini Certificate</h4>
+                <span class="certification__issuer">Google</span>
+                <a
+                  href="assets/pdf/Gemini Certificate.pdf"
+                  class="certification__link"
+                  ><i class="ri-download-line"></i>
+                  <span data-i18n="cert.download">Download</span></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <!-- PROJECTS SECTION -->
       <section class="projects section" id="projects">
-         <div class="section-header">
-            <span class="section__subtitle" data-i18n="projects.subtitle">My recent work</span>
-            <h2 class="section__title" data-i18n="nav.projects">Projects</h2>
-         </div>
+        <div class="section-header">
+          <span class="section__subtitle" data-i18n="projects.subtitle"
+            >My recent work</span
+          >
+          <h2 class="section__title" data-i18n="nav.projects">Projects</h2>
+        </div>
 
-         <div class="projects__container container">
-            <article class="project__card" data-tilt>
-               <div class="project__image">
-                  <img src="assets/img/project-5.jpeg" alt="E-Scoot Algeria">
-                  <div class="project__overlay">
-                     <div class="project__tech">
-                        <span>HTML/CSS/JS</span>
-                        <span>i18n</span>
-                        <span>EmailJS</span>
-                     </div>
-                  </div>
-               </div>
-               <div class="project__content">
-                  <h3 data-i18n="project5.title">E-Scoot Algeria</h3>
-                  <p data-i18n="project5.desc">Multilingual showcase website (FR/EN/AR) for an Algerian electric vehicle
-                     retailer, featuring a filterable product catalogue, lightbox gallery, WhatsApp ordering, and
-                     dark/light mode.</p>
-                  <div class="project__actions">
-                     <a href="https://github.com/FechetahMakhlouf" target="_blank"
-                        class="project__btn project__btn--primary">
-                        <i class="ri-github-fill"></i> <span data-i18n="project.code">Code</span>
-                     </a>
-                     <a href="https://fechetahmakhlouf.github.io/E-Scooter/" target="_blank"
-                        class="project__btn project__btn--ghost">
-                        <i class="ri-external-link-line"></i> <span data-i18n="project.demo">Live</span>
-                     </a>
-                  </div>
-               </div>
-            </article>
+        <div class="projects__container container">
+          <article class="project__card" data-tilt>
+            <div class="project__image">
+              <img src="assets/img/project-5.jpeg" alt="E-Scoot Algeria" />
+              <div class="project__overlay">
+                <div class="project__tech">
+                  <span>HTML/CSS/JS</span>
+                  <span>i18n</span>
+                  <span>EmailJS</span>
+                </div>
+              </div>
+            </div>
+            <div class="project__content">
+              <h3 data-i18n="project5.title">E-Scoot Algeria</h3>
+              <p data-i18n="project5.desc">
+                Multilingual showcase website (FR/EN/AR) for an Algerian
+                electric vehicle retailer, featuring a filterable product
+                catalogue, lightbox gallery, WhatsApp ordering, and dark/light
+                mode.
+              </p>
+              <div class="project__actions">
+                <a
+                  href="https://github.com/FechetahMakhlouf"
+                  target="_blank"
+                  class="project__btn project__btn--primary"
+                >
+                  <i class="ri-github-fill"></i>
+                  <span data-i18n="project.code">Code</span>
+                </a>
+                <a
+                  href="https://fechetahmakhlouf.github.io/E-Scooter/"
+                  target="_blank"
+                  class="project__btn project__btn--ghost"
+                >
+                  <i class="ri-external-link-line"></i>
+                  <span data-i18n="project.demo">Live</span>
+                </a>
+              </div>
+            </div>
+          </article>
 
-            <article class="project__card" data-tilt>
-               <div class="project__image">
-                  <img src="assets/img/project-1.jpeg" alt="Medical Desktop App">
-                  <div class="project__overlay">
-                     <div class="project__tech">
-                        <span>HTML/CSS/JS</span>
-                        <span>Electron</span>
-                        <span>SQLite</span>
-                     </div>
-                  </div>
-               </div>
-               <div class="project__content">
-                  <h3 data-i18n="project1.title">Medical Desktop App</h3>
-                  <p data-i18n="project1.desc">SONATRACH Medical Management System - Complete desktop application for
-                     managing medical records.</p>
-                  <div class="project__actions">
-                     <a href="https://github.com/FechetahMakhlouf" target="_blank"
-                        class="project__btn project__btn--primary">
-                        <i class="ri-github-fill"></i> <span data-i18n="project.code">Code</span>
-                     </a>
-                  </div>
-               </div>
-            </article>
+          <article class="project__card" data-tilt>
+            <div class="project__image">
+              <img src="assets/img/project-1.jpeg" alt="Medical Desktop App" />
+              <div class="project__overlay">
+                <div class="project__tech">
+                  <span>HTML/CSS/JS</span>
+                  <span>Electron</span>
+                  <span>SQLite</span>
+                </div>
+              </div>
+            </div>
+            <div class="project__content">
+              <h3 data-i18n="project1.title">Medical Desktop App</h3>
+              <p data-i18n="project1.desc">
+                SONATRACH Medical Management System - Complete desktop
+                application for managing medical records.
+              </p>
+              <div class="project__actions">
+                <a
+                  href="https://github.com/FechetahMakhlouf"
+                  target="_blank"
+                  class="project__btn project__btn--primary"
+                >
+                  <i class="ri-github-fill"></i>
+                  <span data-i18n="project.code">Code</span>
+                </a>
+              </div>
+            </div>
+          </article>
 
-            <article class="project__card" data-tilt>
-               <div class="project__image">
-                  <img src="assets/img/project-2.jpeg" alt="CFPA Website">
-                  <div class="project__overlay">
-                     <div class="project__tech">
-                        <span>Django</span>
-                        <span>HTML/CSS/JS</span>
-                        <span>SQL</span>
-                     </div>
-                  </div>
-               </div>
-               <div class="project__content">
-                  <h3 data-i18n="project2.title">CFPA Website</h3>
-                  <p data-i18n="project2.desc">A comprehensive web application for managing a professional training
-                     center with student management.</p>
-                  <p class="project__collab">
-                     <i class="ri-user-star-line"></i>
-                     <span data-i18n="project2.collab">Collaboration with</span>
-                     <a href="https://omarfrj.vercel.app/" target="_blank" rel="noopener noreferrer"
-                        class="collab-link">Omar Ferradj</a>
-                  </p>
-                  <div class="project__actions">
-                     <a href="https://github.com/FechetahMakhlouf" target="_blank"
-                        class="project__btn project__btn--primary">
-                        <i class="ri-github-fill"></i> <span data-i18n="project.code">Code</span>
-                     </a>
-                  </div>
-               </div>
-            </article>
+          <article class="project__card" data-tilt>
+            <div class="project__image">
+              <img src="assets/img/project-2.jpeg" alt="CFPA Website" />
+              <div class="project__overlay">
+                <div class="project__tech">
+                  <span>Django</span>
+                  <span>HTML/CSS/JS</span>
+                  <span>SQL</span>
+                </div>
+              </div>
+            </div>
+            <div class="project__content">
+              <h3 data-i18n="project2.title">CFPA Website</h3>
+              <p data-i18n="project2.desc">
+                A comprehensive web application for managing a professional
+                training center with student management.
+              </p>
+              <p class="project__collab">
+                <i class="ri-user-star-line"></i>
+                <span data-i18n="project2.collab">Collaboration with</span>
+                <a
+                  href="https://omarfrj.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="collab-link"
+                  >Omar Ferradj</a
+                >
+              </p>
+              <div class="project__actions">
+                <a
+                  href="https://github.com/FechetahMakhlouf"
+                  target="_blank"
+                  class="project__btn project__btn--primary"
+                >
+                  <i class="ri-github-fill"></i>
+                  <span data-i18n="project.code">Code</span>
+                </a>
+              </div>
+            </div>
+          </article>
 
-            <article class="project__card" data-tilt>
-               <div class="project__image">
-                  <img src="assets/img/project-3.jpeg" alt="Jadwal App">
-                  <div class="project__overlay">
-                     <div class="project__tech">
-                        <span>HTML/CSS/JS</span>
-                        <span>PostgreSQL</span>
-                        <span>Python</span>
-                     </div>
-                  </div>
-               </div>
-               <div class="project__content">
-                  <h3 data-i18n="project3.title">Jadwal - Time Management</h3>
-                  <p data-i18n="project3.desc">Weekly schedule management with automatic planning generation and task
-                     tracking.</p>
-                  <div class="project__actions">
-                     <a href="https://github.com/FechetahMakhlouf" target="_blank"
-                        class="project__btn project__btn--primary">
-                        <i class="ri-github-fill"></i> <span data-i18n="project.code">Code</span>
-                     </a>
-                     <a href="https://fechetahmakhlouf.github.io/Gestion-du-Temps/" target="_blank"
-                        class="project__btn project__btn--ghost">
-                        <i class="ri-external-link-line"></i> <span data-i18n="project.demo">Live</span>
-                     </a>
-                  </div>
-               </div>
-            </article>
+          <article class="project__card" data-tilt>
+            <div class="project__image">
+              <img src="assets/img/project-3.jpeg" alt="Jadwal App" />
+              <div class="project__overlay">
+                <div class="project__tech">
+                  <span>HTML/CSS/JS</span>
+                  <span>PostgreSQL</span>
+                  <span>Python</span>
+                </div>
+              </div>
+            </div>
+            <div class="project__content">
+              <h3 data-i18n="project3.title">Jadwal - Time Management</h3>
+              <p data-i18n="project3.desc">
+                Weekly schedule management with automatic planning generation
+                and task tracking.
+              </p>
+              <div class="project__actions">
+                <a
+                  href="https://github.com/FechetahMakhlouf"
+                  target="_blank"
+                  class="project__btn project__btn--primary"
+                >
+                  <i class="ri-github-fill"></i>
+                  <span data-i18n="project.code">Code</span>
+                </a>
+                <a
+                  href="https://fechetahmakhlouf.github.io/Gestion-du-Temps/"
+                  target="_blank"
+                  class="project__btn project__btn--ghost"
+                >
+                  <i class="ri-external-link-line"></i>
+                  <span data-i18n="project.demo">Live</span>
+                </a>
+              </div>
+            </div>
+          </article>
 
-            <article class="project__card" data-tilt>
-               <div class="project__image">
-                  <img src="assets/img/project-4.jpeg" alt="Cat Detector">
-                  <div class="project__overlay">
-                     <div class="project__tech">
-                        <span>Python</span>
-                        <span>TensorFlow</span>
-                        <span>Streamlit</span>
-                     </div>
-                  </div>
-               </div>
-               <div class="project__content">
-                  <h3 data-i18n="project4.title">Cat vs Non-Cat Detector</h3>
-                  <p data-i18n="project4.desc">Neural Network classifier to detect cats in images with data augmentation
-                     pipeline.</p>
-                  <div class="project__actions">
-                     <a href="https://github.com/FechetahMakhlouf" target="_blank"
-                        class="project__btn project__btn--primary">
-                        <i class="ri-github-fill"></i> <span data-i18n="project.code">Code</span>
-                     </a>
-                     <a href="https://cat-detector-tit1.onrender.com" target="_blank"
-                        class="project__btn project__btn--ghost">
-                        <i class="ri-external-link-line"></i> <span data-i18n="project.demo">Live</span>
-                     </a>
-                  </div>
-               </div>
-            </article>
-
-         </div>
+          <article class="project__card" data-tilt>
+            <div class="project__image">
+              <img src="assets/img/project-4.jpeg" alt="Cat Detector" />
+              <div class="project__overlay">
+                <div class="project__tech">
+                  <span>Python</span>
+                  <span>TensorFlow</span>
+                  <span>Streamlit</span>
+                </div>
+              </div>
+            </div>
+            <div class="project__content">
+              <h3 data-i18n="project4.title">Cat vs Non-Cat Detector</h3>
+              <p data-i18n="project4.desc">
+                Neural Network classifier to detect cats in images with data
+                augmentation pipeline.
+              </p>
+              <div class="project__actions">
+                <a
+                  href="https://github.com/FechetahMakhlouf"
+                  target="_blank"
+                  class="project__btn project__btn--primary"
+                >
+                  <i class="ri-github-fill"></i>
+                  <span data-i18n="project.code">Code</span>
+                </a>
+                <a
+                  href="https://cat-detector-tit1.onrender.com"
+                  target="_blank"
+                  class="project__btn project__btn--ghost"
+                >
+                  <i class="ri-external-link-line"></i>
+                  <span data-i18n="project.demo">Live</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
       </section>
 
       <!-- RESUME SECTION -->
       <section class="resume section" id="resume">
-         <div class="section-header">
-            <span class="section__subtitle" data-i18n="resume.subtitle">My journey</span>
-            <h2 class="section__title" data-i18n="resume.title">Resume</h2>
-         </div>
+        <div class="section-header">
+          <span class="section__subtitle" data-i18n="resume.subtitle"
+            >My journey</span
+          >
+          <h2 class="section__title" data-i18n="resume.title">Resume</h2>
+        </div>
 
-         <div class="resume__container container">
-            <!-- Education Timeline -->
-            <div class="resume__column">
-               <div class="resume__header">
-                  <div class="resume__icon"><i class="ri-graduation-cap-fill"></i></div>
-                  <h3 data-i18n="resume.education">Education</h3>
-               </div>
-
-               <div class="timeline">
-                  <div class="timeline-item">
-                     <div class="timeline-marker">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-line"></div>
-                     </div>
-                     <div class="timeline-content">
-                        <span class="timeline-date"><i class="ri-calendar-line"></i> 2025 - 2027</span>
-                        <h4 data-i18n="edu1.title">Master's in AI</h4>
-                        <p class="timeline-location"><i class="ri-map-pin-line"></i> University of Bouira</p>
-                        <p class="timeline-desc" data-i18n="edu1.desc">Specializing in Artificial Intelligence (in
-                           progress).</p>
-                        <div class="timeline-tags">
-                           <span>Deep Learning</span>
-                           <span>NLP</span>
-                           <span>Computer Vision</span>
-                        </div>
-                     </div>
-                  </div>
-
-                  <div class="timeline-item">
-                     <div class="timeline-marker">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-line"></div>
-                     </div>
-                     <div class="timeline-content">
-                        <span class="timeline-date"><i class="ri-calendar-line"></i> 2022 - 2025</span>
-                        <h4 data-i18n="edu2.title">Bachelor's in CS</h4>
-                        <p class="timeline-location"><i class="ri-map-pin-line"></i> University of Bouira</p>
-                        <p class="timeline-desc" data-i18n="edu2.desc">Computer Systems - Diploma obtained in June 2025.
-                        </p>
-                        <div class="timeline-tags">
-                           <span>Algorithms</span>
-                           <span>Databases</span>
-                           <span>Web Dev</span>
-                        </div>
-                     </div>
-                  </div>
-
-                  <div class="timeline-item">
-                     <div class="timeline-marker">
-                        <div class="timeline-dot timeline-dot--small"></div>
-                     </div>
-                     <div class="timeline-content">
-                        <span class="timeline-date"><i class="ri-calendar-line"></i> 2022</span>
-                        <h4 data-i18n="edu3.title">Baccalaureate</h4>
-                        <p class="timeline-location"><i class="ri-map-pin-line"></i> Belkacemi Ali High School</p>
-                        <p class="timeline-desc" data-i18n="edu3.desc">Experimental Sciences.</p>
-                     </div>
-                  </div>
-               </div>
+        <div class="resume__container container">
+          <!-- Education Timeline -->
+          <div class="resume__column">
+            <div class="resume__header">
+              <div class="resume__icon">
+                <i class="ri-graduation-cap-fill"></i>
+              </div>
+              <h3 data-i18n="resume.education">Education</h3>
             </div>
 
-            <!-- Experience Timeline -->
-            <div class="resume__column">
-               <div class="resume__header">
-                  <div class="resume__icon"><i class="ri-briefcase-fill"></i></div>
-                  <h3 data-i18n="resume.experience">Experience</h3>
-               </div>
-
-               <div class="timeline">
-                  <div class="timeline-item">
-                     <div class="timeline-marker">
-                        <div class="timeline-dot timeline-dot--active"></div>
-                     </div>
-                     <div class="timeline-content">
-                        <span class="timeline-date"><i class="ri-calendar-line"></i> Feb 2025 - Mar 2025</span>
-                        <h4 data-i18n="exp1.title">Practical Internship</h4>
-                        <p class="timeline-location"><i class="ri-building-line"></i> SONATRACH - SBM</p>
-                        <p class="timeline-desc" data-i18n="exp1.desc">Practical internship in Computer Systems at the
-                           national company SONATRACH.</p>
-                        <div class="timeline-tags">
-                           <span>Desktop App</span>
-                           <span>Database</span>
-                           <span>Medical System</span>
-                        </div>
-                     </div>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-marker">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-line"></div>
+                </div>
+                <div class="timeline-content">
+                  <span class="timeline-date"
+                    ><i class="ri-calendar-line"></i> 2025 - 2027</span
+                  >
+                  <h4 data-i18n="edu1.title">Master's in AI</h4>
+                  <p class="timeline-location">
+                    <i class="ri-map-pin-line"></i> University of Bouira
+                  </p>
+                  <p class="timeline-desc" data-i18n="edu1.desc">
+                    Specializing in Artificial Intelligence (in progress).
+                  </p>
+                  <div class="timeline-tags">
+                    <span>Deep Learning</span>
+                    <span>NLP</span>
+                    <span>Computer Vision</span>
                   </div>
-               </div>
+                </div>
+              </div>
 
-               <!-- Quick Stats -->
-               <div class="resume__stats">
-                  <h4 data-i18n="resume.quickStats">Quick Stats</h4>
-                  <div class="stats__grid">
-                     <div class="stat-box">
-                        <i class="ri-code-box-line"></i>
-                        <span class="stat-value">6000+</span>
-                        <span class="stat-label" data-i18n="resume.codes">Lines of Code</span>
-                     </div>
-                     <div class="stat-box">
-                        <i class="ri-git-commit-line"></i>
-                        <span class="stat-value">200+</span>
-                        <span class="stat-label" data-i18n="resume.commits">Git Commits</span>
-                     </div>
+              <div class="timeline-item">
+                <div class="timeline-marker">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-line"></div>
+                </div>
+                <div class="timeline-content">
+                  <span class="timeline-date"
+                    ><i class="ri-calendar-line"></i> 2022 - 2025</span
+                  >
+                  <h4 data-i18n="edu2.title">Bachelor's in CS</h4>
+                  <p class="timeline-location">
+                    <i class="ri-map-pin-line"></i> University of Bouira
+                  </p>
+                  <p class="timeline-desc" data-i18n="edu2.desc">
+                    Computer Systems - Diploma obtained in June 2025.
+                  </p>
+                  <div class="timeline-tags">
+                    <span>Algorithms</span>
+                    <span>Databases</span>
+                    <span>Web Dev</span>
                   </div>
-               </div>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-marker">
+                  <div class="timeline-dot timeline-dot--small"></div>
+                </div>
+                <div class="timeline-content">
+                  <span class="timeline-date"
+                    ><i class="ri-calendar-line"></i> 2022</span
+                  >
+                  <h4 data-i18n="edu3.title">Baccalaureate</h4>
+                  <p class="timeline-location">
+                    <i class="ri-map-pin-line"></i> Belkacemi Ali High School
+                  </p>
+                  <p class="timeline-desc" data-i18n="edu3.desc">
+                    Experimental Sciences.
+                  </p>
+                </div>
+              </div>
             </div>
-         </div>
+          </div>
+
+          <!-- Experience Timeline -->
+          <div class="resume__column">
+            <div class="resume__header">
+              <div class="resume__icon"><i class="ri-briefcase-fill"></i></div>
+              <h3 data-i18n="resume.experience">Experience</h3>
+            </div>
+
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-marker">
+                  <div class="timeline-dot timeline-dot--active"></div>
+                </div>
+                <div class="timeline-content">
+                  <span class="timeline-date"
+                    ><i class="ri-calendar-line"></i> Feb 2025 - Mar 2025</span
+                  >
+                  <h4 data-i18n="exp1.title">Practical Internship</h4>
+                  <p class="timeline-location">
+                    <i class="ri-building-line"></i> SONATRACH - SBM
+                  </p>
+                  <p class="timeline-desc" data-i18n="exp1.desc">
+                    Practical internship in Computer Systems at the national
+                    company SONATRACH.
+                  </p>
+                  <div class="timeline-tags">
+                    <span>Desktop App</span>
+                    <span>Database</span>
+                    <span>Medical System</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="resume__stats">
+              <h4 data-i18n="resume.quickStats">Quick Stats</h4>
+              <div class="stats__grid">
+                <div class="stat-box">
+                  <i class="ri-code-box-line"></i>
+                  <span class="stat-value">6000+</span>
+                  <span class="stat-label" data-i18n="resume.codes"
+                    >Lines of Code</span
+                  >
+                </div>
+                <div class="stat-box">
+                  <i class="ri-git-commit-line"></i>
+                  <span class="stat-value">200+</span>
+                  <span class="stat-label" data-i18n="resume.commits"
+                    >Git Commits</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <!-- CONTACT SECTION -->
       <section class="contact section" id="contact">
-         <div class="section-header">
-            <span class="section__subtitle" data-i18n="contact.subtitle">Get in touch</span>
-            <h2 class="section__title" data-i18n="contact.title">Contact Me</h2>
-         </div>
+        <div class="section-header">
+          <span class="section__subtitle" data-i18n="contact.subtitle"
+            >Get in touch</span
+          >
+          <h2 class="section__title" data-i18n="contact.title">Contact Me</h2>
+        </div>
 
-         <div class="contact__container container">
-            <div class="contact__info">
-               <div class="contact__card">
-                  <div class="contact__card-icon"><i class="ri-mail-fill"></i></div>
-                  <h4 data-i18n="contact.emailTitle">Email</h4>
-                  <p>makhlouffechetah65@gmail.com</p>
-                  <a href="mailto:makhlouffechetah65@gmail.com" class="contact__card-link">
-                     <span data-i18n="contact.send">Send Email</span> <i class="ri-arrow-right-line"></i>
-                  </a>
-               </div>
-
-               <div class="contact__card">
-                  <div class="contact__card-icon"><i class="ri-phone-fill"></i></div>
-                  <h4 data-i18n="contact.phoneTitle">Phone</h4>
-                  <p>+213-666218828</p>
-                  <a href="tel:+213666218828" class="contact__card-link">
-                     <span data-i18n="contact.call">Call Now</span> <i class="ri-arrow-right-line"></i>
-                  </a>
-               </div>
-
-               <div class="contact__card">
-                  <div class="contact__card-icon"><i class="ri-map-pin-2-fill"></i></div>
-                  <h4 data-i18n="contact.locationTitle">Location</h4>
-                  <p data-i18n="contact.location">Algeria, Bouira, Saharidj</p>
-                  <span class="contact__status"><i class="ri-time-line"></i> <span
-                        data-i18n="contact.timezone">GMT+1</span></span>
-               </div>
+        <div class="contact__container container">
+          <div class="contact__info">
+            <div class="contact__card">
+              <div class="contact__card-icon"><i class="ri-mail-fill"></i></div>
+              <h4 data-i18n="contact.emailTitle">Email</h4>
+              <p>makhlouffechetah65@gmail.com</p>
+              <a
+                href="mailto:makhlouffechetah65@gmail.com"
+                class="contact__card-link"
+              >
+                <span data-i18n="contact.send">Send Email</span>
+                <i class="ri-arrow-right-line"></i>
+              </a>
             </div>
 
-            <form action="" class="contact__form" id="contact-form">
-               <div class="form-header">
-                  <h3 data-i18n="contact.formTitle">Send a Message</h3>
-                  <p data-i18n="contact.formDesc">I'll get back to you as soon as possible!</p>
-               </div>
+            <div class="contact__card">
+              <div class="contact__card-icon">
+                <i class="ri-phone-fill"></i>
+              </div>
+              <h4 data-i18n="contact.phoneTitle">Phone</h4>
+              <p>+213-666218828</p>
+              <a href="tel:+213666218828" class="contact__card-link">
+                <span data-i18n="contact.call">Call Now</span>
+                <i class="ri-arrow-right-line"></i>
+              </a>
+            </div>
 
-               <div class="form-group">
-                  <div class="input-wrapper">
-                     <i class="ri-user-line"></i>
-                     <input type="text" name="user_name" required class="contact__input" placeholder=" "
-                        id="name-input">
-                     <label for="name-input" class="floating-label" data-i18n="contact.name">Your Name</label>
-                  </div>
-               </div>
+            <div class="contact__card">
+              <div class="contact__card-icon">
+                <i class="ri-map-pin-2-fill"></i>
+              </div>
+              <h4 data-i18n="contact.locationTitle">Location</h4>
+              <p data-i18n="contact.location">Algeria, Bouira, Saharidj</p>
+              <span class="contact__status"
+                ><i class="ri-time-line"></i>
+                <span data-i18n="contact.timezone">GMT+1</span></span
+              >
+            </div>
+          </div>
 
-               <div class="form-group">
-                  <div class="input-wrapper">
-                     <i class="ri-mail-line"></i>
-                     <input type="email" name="user_email" required class="contact__input" placeholder=" "
-                        id="email-input">
-                     <label for="email-input" class="floating-label" data-i18n="contact.email">Your Email</label>
-                  </div>
-               </div>
+          <form action="" class="contact__form" id="contact-form">
+            <div class="form-header">
+              <h3 data-i18n="contact.formTitle">Send a Message</h3>
+              <p data-i18n="contact.formDesc">
+                I'll get back to you as soon as possible!
+              </p>
+            </div>
 
-               <div class="form-group">
-                  <div class="input-wrapper input-wrapper--textarea">
-                     <i class="ri-message-3-line"></i>
-                     <textarea name="user_message" required class="contact__input contact__area" placeholder=" "
-                        id="message-input"></textarea>
-                     <label for="message-input" class="floating-label" data-i18n="contact.message">Your Message</label>
-                  </div>
-               </div>
+            <div class="form-group">
+              <div class="input-wrapper">
+                <i class="ri-user-line"></i>
+                <input
+                  type="text"
+                  name="user_name"
+                  required
+                  class="contact__input"
+                  placeholder=" "
+                  id="name-input"
+                />
+                <label
+                  for="name-input"
+                  class="floating-label"
+                  data-i18n="contact.name"
+                  >Your Name</label
+                >
+              </div>
+            </div>
 
-               <button type="submit" class="button button-primary button-full">
-                  <i class="ri-send-plane-fill"></i>
-                  <span data-i18n="contact.sendBtn">Send Message</span>
-               </button>
+            <div class="form-group">
+              <div class="input-wrapper">
+                <i class="ri-mail-line"></i>
+                <input
+                  type="email"
+                  name="user_email"
+                  required
+                  class="contact__input"
+                  placeholder=" "
+                  id="email-input"
+                />
+                <label
+                  for="email-input"
+                  class="floating-label"
+                  data-i18n="contact.email"
+                  >Your Email</label
+                >
+              </div>
+            </div>
 
-               <p class="contact__message" id="contact-message"></p>
-            </form>
-         </div>
+            <div class="form-group">
+              <div class="input-wrapper input-wrapper--textarea">
+                <i class="ri-message-3-line"></i>
+                <textarea
+                  name="user_message"
+                  required
+                  class="contact__input contact__area"
+                  placeholder=" "
+                  id="message-input"
+                ></textarea>
+                <label
+                  for="message-input"
+                  class="floating-label"
+                  data-i18n="contact.message"
+                  >Your Message</label
+                >
+              </div>
+            </div>
+
+            <button type="submit" class="button button-primary button-full">
+              <i class="ri-send-plane-fill"></i>
+              <span data-i18n="contact.sendBtn">Send Message</span>
+            </button>
+
+            <p class="contact__message" id="contact-message"></p>
+          </form>
+        </div>
       </section>
-   </main>
+    </main>
 
-   <!-- CHATBOT -->
-   <button id="chatbot-toggler" title="Chat with me">
+    <!-- CHATBOT -->
+    <button id="chatbot-toggler" title="Chat with me">
       <span class="chatbot-icon"><i class="ri-message-3-line"></i></span>
       <span class="chatbot-close"><i class="ri-close-line"></i></span>
       <span class="chatbot-notification">1</span>
-   </button>
+    </button>
 
-   <div class="chatbot-popup">
+    <div class="chatbot-popup">
       <div class="chat-header">
-         <div class="header-info">
-            <div class="chatbot-avatar">
-               <img src="assets/img/home-perfil.png" alt="Makhlouf Assistant">
-               <span class="online-status"></span>
-            </div>
-         </div>
-         <div class="header-actions">
-            <button id="clear-chat" class="header-btn" title="Clear chat"><i class="ri-delete-bin-line"></i></button>
-            <button id="close-chatbot" class="header-btn"><i class="ri-arrow-down-s-line"></i></button>
-         </div>
+        <div class="header-info">
+          <div class="chatbot-avatar">
+            <img src="assets/img/home-perfil.png" alt="Makhlouf Assistant" />
+            <span class="online-status"></span>
+          </div>
+        </div>
+        <div class="header-actions">
+          <button id="clear-chat" class="header-btn" title="Clear chat">
+            <i class="ri-delete-bin-line"></i>
+          </button>
+          <button id="close-chatbot" class="header-btn">
+            <i class="ri-arrow-down-s-line"></i>
+          </button>
+        </div>
       </div>
 
       <div class="chat-body">
-         <!-- Welcome message with quick actions -->
-         <div class="message bot-message welcome-message">
-            <img class="bot-avatar" src="assets/img/home-perfil.png" alt="Bot">
-            <div class="message-content">
-               <div class="message-text">
-                  <p>👋 Salam Alaikoum! I'm <strong>Makhlouf's Assistant</strong>.</p>
-                  <p>How can I help you today?</p>
-               </div>
-               <div class="quick-actions">
-                  <button class="quick-action-btn" data-action="skills">
-                     <i class="ri-tools-line"></i> Skills
-                  </button>
-                  <button class="quick-action-btn" data-action="projects">
-                     <i class="ri-folder-3-line"></i> Projects
-                  </button>
-                  <button class="quick-action-btn" data-action="contact">
-                     <i class="ri-mail-line"></i> Contact
-                  </button>
-                  <button class="quick-action-btn" data-action="resume">
-                     <i class="ri-file-list-3-line"></i> Resume
-                  </button>
-               </div>
+        <!-- Welcome message with quick actions -->
+        <div class="message bot-message welcome-message">
+          <img class="bot-avatar" src="assets/img/home-perfil.png" alt="Bot" />
+          <div class="message-content">
+            <div class="message-text">
+              <p>
+                👋 Salam Alaikoum! I'm <strong>Makhlouf's Assistant</strong>.
+              </p>
+              <p>How can I help you today?</p>
             </div>
-         </div>
+            <div class="quick-actions">
+              <button class="quick-action-btn" data-action="skills">
+                <i class="ri-tools-line"></i> Skills
+              </button>
+              <button class="quick-action-btn" data-action="projects">
+                <i class="ri-folder-3-line"></i> Projects
+              </button>
+              <button class="quick-action-btn" data-action="contact">
+                <i class="ri-mail-line"></i> Contact
+              </button>
+              <button class="quick-action-btn" data-action="resume">
+                <i class="ri-file-list-3-line"></i> Resume
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="chat-footer">
-         <form action="#" class="chat-form">
-            <div class="input-container">
-               <textarea placeholder="Type a message..." class="message-input" required></textarea>
-               <div class="input-actions">
-                  <button type="button" id="emoji-picker" class="action-btn" title="Emoji">
-                     <i class="ri-emotion-happy-line"></i>
-                  </button>
-               </div>
+        <form action="#" class="chat-form">
+          <div class="input-container">
+            <textarea
+              placeholder="Type a message..."
+              class="message-input"
+              required
+            ></textarea>
+            <div class="input-actions">
+              <button
+                type="button"
+                id="emoji-picker"
+                class="action-btn"
+                title="Emoji"
+              >
+                <i class="ri-emotion-happy-line"></i>
+              </button>
             </div>
-            <button type="submit" class="send-btn" id="send-message" title="Send">
-               <i class="ri-send-plane-fill"></i>
-            </button>
-         </form>
+          </div>
+          <button type="submit" class="send-btn" id="send-message" title="Send">
+            <i class="ri-send-plane-fill"></i>
+          </button>
+        </form>
       </div>
-   </div>
+    </div>
 
-   <!-- Footer -->
-   <footer class="footer">
+    <!-- Footer -->
+    <footer class="footer">
       <div class="footer__container container">
-         <div class="footer__brand">
-            <a href="#" class="footer__logo">
-               <i class="ri-code-box-fill"></i>
-               <span>Makhlouf</span>
+        <div class="footer__brand">
+          <a href="#" class="footer__logo">
+            <i class="ri-code-box-fill"></i>
+            <span>Makhlouf</span>
+          </a>
+          <p data-i18n="footer.tagline">Building the future with code and AI</p>
+        </div>
+
+        <div class="footer__links">
+          <h4 data-i18n="footer.quickLinks">Quick Links</h4>
+          <nav>
+            <a href="#home" data-i18n="nav.home">Home</a>
+            <a href="#about" data-i18n="nav.about">About</a>
+            <a href="#projects" data-i18n="nav.projects">Projects</a>
+            <a href="#contact" data-i18n="nav.contact">Contact</a>
+          </nav>
+        </div>
+
+        <div class="footer__social">
+          <h4 data-i18n="footer.follow">Follow Me</h4>
+          <div class="social__links">
+            <a
+              href="https://www.facebook.com/share/12MfhqrZF4R/"
+              target="_blank"
+              class="social__link"
+              title="Facebook"
+            >
+              <i class="ri-facebook-circle-fill"></i>
             </a>
-            <p data-i18n="footer.tagline">Building the future with code and AI</p>
-         </div>
-
-         <div class="footer__links">
-            <h4 data-i18n="footer.quickLinks">Quick Links</h4>
-            <nav>
-               <a href="#home" data-i18n="nav.home">Home</a>
-               <a href="#about" data-i18n="nav.about">About</a>
-               <a href="#projects" data-i18n="nav.projects">Projects</a>
-               <a href="#contact" data-i18n="nav.contact">Contact</a>
-            </nav>
-         </div>
-
-         <div class="footer__social">
-            <h4 data-i18n="footer.follow">Follow Me</h4>
-            <div class="social__links">
-               <a href="https://www.facebook.com/share/12MfhqrZF4R/" target="_blank" class="social__link"
-                  title="Facebook">
-                  <i class="ri-facebook-circle-fill"></i>
-               </a>
-               <a href="https://www.instagram.com/fechetah.makhlouf" target="_blank" class="social__link"
-                  title="Instagram">
-                  <i class="ri-instagram-fill"></i>
-               </a>
-               <a href="https://github.com/FechetahMakhlouf" target="_blank" class="social__link" title="GitHub">
-                  <i class="ri-github-fill"></i>
-               </a>
-               <a href="https://www.linkedin.com/in/makhlouf-fechetah-2b1085332" target="_blank" class="social__link"
-                  title="LinkedIn">
-                  <i class="ri-linkedin-fill"></i>
-               </a>
-            </div>
-         </div>
+            <a
+              href="https://www.instagram.com/fechetah.makhlouf"
+              target="_blank"
+              class="social__link"
+              title="Instagram"
+            >
+              <i class="ri-instagram-fill"></i>
+            </a>
+            <a
+              href="https://github.com/FechetahMakhlouf"
+              target="_blank"
+              class="social__link"
+              title="GitHub"
+            >
+              <i class="ri-github-fill"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/makhlouf-fechetah-2b1085332"
+              target="_blank"
+              class="social__link"
+              title="LinkedIn"
+            >
+              <i class="ri-linkedin-fill"></i>
+            </a>
+          </div>
+        </div>
       </div>
 
       <div class="footer__bottom">
-         <span class="footer__copy" data-i18n="footer.copy">© 2025 All Rights Reserved | Makhlouf Fechetah</span>
+        <span class="footer__copy" data-i18n="footer.copy"
+          >© 2025 All Rights Reserved | Makhlouf Fechetah</span
+        >
       </div>
-   </footer>
+    </footer>
 
-   <!-- Scroll to top -->
-   <a href="#home" class="scrollup" id="scroll-up" title="Scroll to top">
+    <!-- Scroll to top -->
+    <a href="#home" class="scrollup" id="scroll-up" title="Scroll to top">
       <i class="ri-arrow-up-line"></i>
-   </a>
+    </a>
 
-   <!-- Scripts -->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.min.js"></script>
-   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
-   <script src="assets/js/main.js"></script>
-   <script src="assets/js/chatbot.js"></script>
-</body>
-
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/chatbot.js"></script>
+  </body>
 </html>
