@@ -53,7 +53,7 @@ CERTIFICATIONS:
 - En cours : Deep Learning Specialization – DeepLearning.AI / Coursera
 
 PROJETS RÉALISÉS:
-- E-Scoot Algeria : site catalogue trilingue FR/EN/AR (HTML5, CSS3, JavaScript, i18n, EmailJS), filtrage produits, galerie, commande WhatsApp, thème clair/sombre
+- E-SCOOT DZ (en collaboration avec Omar Ferradj, non déployé) : plateforme e-commerce full-stack de trottinettes électriques en Algérie – front React/TypeScript, API Django REST ; catalogue, panier, favoris, comptes, paiement et commandes, avis, coupons, commande rapide pour campagnes réseaux sociaux ; assistant IA (Q&R produit, comparaison intelligente, recherche vectorielle) ; tableau de bord admin (produits, catégories, commandes, clients, leads, coupons, bannières, notifications, statistiques) ; PostgreSQL, Redis, Celery, Docker, JWT, EN/FR/AR (RTL)
 - Application médicale desktop (Electron, SQLite) développée pendant le stage SONATRACH
 - Site web CFPA (Django, SQL) : gestion d'un centre de formation professionnelle, projet collaboratif
 - Jadwal (Python, PostgreSQL, JavaScript) : emplois du temps et tâches, génération automatique, comptes, détection de conflits, export, score de productivité, mode sombre

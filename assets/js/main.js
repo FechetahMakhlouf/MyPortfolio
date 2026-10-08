@@ -45,8 +45,8 @@ const translations = {
         'project3.desc': 'Weekly timetable and task manager with automatic scheduling, conflict detection, export, productivity scoring and dark mode.',
         'project4.title': 'Cat vs Non-Cat Detector',
         'project4.desc': 'Neural-network image classifier (cat / non-cat) with data augmentation, deployed with Streamlit.',
-        'project5.title': 'E-Scoot Algeria',
-        'project5.desc': 'Multilingual showcase website (FR/EN/AR) for an Algerian electric vehicle retailer, featuring a filterable product catalogue, lightbox gallery, WhatsApp ordering, and dark/light mode.',
+        'project5.title': 'E-SCOOT DZ — Full-Stack E-Commerce Platform',
+        'project5.desc': "Full-stack e-commerce platform for electric scooters in Algeria: React/TypeScript storefront and Django REST API. Catalog, cart, wishlist, accounts, checkout and orders, reviews, coupons, quick-order flow for social-media campaigns, AI product Q&A and smart comparison (vector retrieval), plus a full admin dashboard with analytics. PostgreSQL, Redis, Celery, Docker, JWT, EN/FR/AR (RTL).",
 
         'resume.subtitle': 'My journey',
         'resume.title': 'Resume',
@@ -138,8 +138,8 @@ const translations = {
         'project3.desc': "Gestion d'emplois du temps et de tâches avec planification automatique, détection de conflits, export, score de productivité et mode sombre.",
         'project4.title': 'Détecteur Chat / Non-Chat',
         'project4.desc': "Classificateur d'images par réseau de neurones (chat / non-chat) avec augmentation de données, déployé avec Streamlit.",
-        'project5.title': 'E-Scoot Algérie',
-        'project5.desc': "Site vitrine multilingue (FR/EN/AR) pour un revendeur algérien de véhicules électriques, avec catalogue filtrable, galerie lightbox, commande WhatsApp et mode sombre/clair.",
+        'project5.title': 'E-SCOOT DZ — Full-Stack E-Commerce Platform',
+        'project5.desc': "Plateforme e-commerce full-stack de trottinettes électriques en Algérie : interface React/TypeScript et API Django REST. Catalogue, panier, favoris, comptes, paiement et commandes, avis, coupons, commande rapide pour campagnes réseaux sociaux, assistant IA (Q&R produit et comparaison intelligente par recherche vectorielle) et tableau de bord admin complet avec statistiques. PostgreSQL, Redis, Celery, Docker, JWT, EN/FR/AR (RTL).",
 
         'resume.subtitle': 'Mon parcours',
         'resume.title': 'Curriculum Vitae',
