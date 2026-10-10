@@ -217,16 +217,35 @@ const updateTyped = (lang) => {
     });
 };
 
+
 const setLang = (lang) => {
     currentLang = lang;
     localStorage.setItem('selected-lang', lang);
+
     applyTranslations(lang);
     updateTyped(lang);
+    
+    const cvLink = document.getElementById('cv-download');
 
+    if (cvLink) {
+        if (lang === 'fr') {
+            cvLink.href = 'assets/pdf/CV%20fr.pdf';
+            cvLink.download = 'CV fr.pdf';
+        } else {
+            cvLink.href = 'assets/pdf/CV%20eng.pdf';
+            cvLink.download = 'CV eng.pdf';
+        }
+    }
+
+    // Update the active language button
     document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.classList.toggle('active-lang', btn.getAttribute('data-lang') === lang);
+        btn.classList.toggle(
+            'active-lang',
+            btn.getAttribute('data-lang') === lang
+        );
     });
 };
+
 
 /*=============== MOBILE MENU ===============*/
 const navMenu = document.getElementById('nav-menu');
