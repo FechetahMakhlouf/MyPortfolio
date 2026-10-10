@@ -59,7 +59,7 @@ const translations = {
         'edu1.title': "Master's in AI",
         'edu1.desc': 'Artificial Intelligence — M1 validated (15.04/20), currently in M2.',
         'edu2.title': "Bachelor's in CS",
-        'edu2.desc': 'Computer Systems — average 12.06/20.',
+        'edu2.desc': 'Computer Systems — average 10.84/20.',
         'edu3.title': 'Baccalaureate',
         'edu3.desc': 'Experimental Sciences — (12.94/20).',
 
@@ -152,7 +152,7 @@ const translations = {
         'edu1.title': "Master en IA",
         'edu1.desc': "Intelligence Artificielle — M1 validé (15,04/20), actuellement en M2.",
         'edu2.title': "Licence en Info",
-        'edu2.desc': 'Systèmes Informatiques — moyenne 12,06/20.',
+        'edu2.desc': 'Systèmes Informatiques — moyenne 10,84/20.',
         'edu3.title': 'Baccalauréat',
         'edu3.desc': 'Sciences Expérimentales — (12,94/20).',
 

@@ -36,12 +36,11 @@ FORMATION ACADÉMIQUE:
   - Notes : Représentation des connaissances 16,00 ; Gestion de l'incertitude 16,20 ; Systèmes multi-agents 16,00 ; Deep Learning 14,85 ; Machine Learning 14,20 ; Analyse de données 15,10 ; Bases de données avancées 14,46 ; Vision par ordinateur 13,65 ; Cybercriminalité 18,00 ; Modélisation & Simulation 16,75 ; Virtualisation & Cloud 16,60 ; Gestion de projet IT 15,81
   - Master 2 (2026-2027) : actuellement inscrit
 - 2022-2025: Licence en Informatique – Systèmes Informatiques – Université de Bouira
-  - 180 crédits, moyenne générale 12,06/20 (L1 11,57 | L2 12,05 | L3 12,54), meilleur semestre S6 13,01
-  - Toutes les années validées en session normale ; projet de fin d'études 17,00/20 ; IA 17,10 ; Bases de données 15,40
+  - 180 crédits, moyenne générale 10,84/20 (L1 10,09 | L2 11,02 | L3 11,41)
 - 2022: Baccalauréat Sciences Expérimentales – Lycée Belkacemi Ali (mention Assez Bien, 12,94/20)
 
 EXPÉRIENCE PROFESSIONNELLE:
-- Fév–Avr 2025 (60 jours) : Stagiaire IT – Systèmes d'Information chez SONATRACH – Activité Transport par Canalisations (TRC), Station de Béni Mansour. Développement d'une application desktop de gestion des dossiers médicaux (Electron, SQLite, HTML, CSS, JavaScript).
+- Fév–Mar 2025 (30 jours) : Stagiaire IT – Systèmes d'Information chez SONATRACH – Activité Transport par Canalisations (TRC), Station de Béni Mansour. Développement d'une application desktop de gestion des dossiers médicaux (Electron, SQLite, HTML, CSS, JavaScript).
 - Mai 2026 – aujourd'hui : Auto-entrepreneur en micro-importation (ANAE – Algérie) : sourcing, achats et opérations commerciales.
 
 CERTIFICATIONS:
