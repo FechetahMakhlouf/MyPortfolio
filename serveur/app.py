@@ -31,11 +31,11 @@ INFORMATIONS PERSONNELLES:
 - Email: makhlouffechetah65@gmail.com
 
 FORMATION ACADÉMIQUE:
-- 2025-2027: Master en Informatique – Intelligence Artificielle (en cours) – Université de Bouira (Akli Mohand Oulhadj)
+- 2025-2027: Master en Informatique – Intelligence Artificielle (en cours) – Université de Tizi-ouzou (Akli Mohand Oulhadj)
   - Master 1 (2025-2026) : moyenne annuelle 15,04/20 (S1 14,33 | S2 15,71), 60/60 crédits en session normale
   - Notes : Représentation des connaissances 16,00 ; Gestion de l'incertitude 16,20 ; Systèmes multi-agents 16,00 ; Deep Learning 14,85 ; Machine Learning 14,20 ; Analyse de données 15,10 ; Bases de données avancées 14,46 ; Vision par ordinateur 13,65 ; Cybercriminalité 18,00 ; Modélisation & Simulation 16,75 ; Virtualisation & Cloud 16,60 ; Gestion de projet IT 15,81
   - Master 2 (2026-2027) : actuellement inscrit
-- 2022-2025: Licence en Informatique – Systèmes Informatiques – Université de Bouira
+- 2022-2025: Licence en Informatique – Systèmes Informatiques – Université de Tizi-ouzou
   - 180 crédits, moyenne générale 10,84/20 (L1 10,09 | L2 11,02 | L3 11,41)
 - 2022: Baccalauréat Sciences Expérimentales – Lycée Belkacemi Ali (mention Assez Bien, 12,94/20)
 

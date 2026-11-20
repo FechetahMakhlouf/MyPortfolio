@@ -65,13 +65,13 @@ const knowledgeBase = {
         }
     ],
     education: [
-        { degree: "Master's in AI", school: "University of Bouira", year: "2025-2027", status: "In Progress" },
-        { degree: "Bachelor's in CS", school: "University of Bouira", year: "2022-2025", status: "Completed" }
+        { degree: "Master's in AI", school: "University of Tizi-ouzou", year: "2025-2027", status: "In Progress" },
+        { degree: "Bachelor's in CS", school: "University of Tizi-ouzou", year: "2022-2025", status: "Completed" }
     ],
     contact: {
         email: 'makhlouffechetah65@gmail.com',
         phone: '+213-666218828',
-        location: 'Algeria, Bouira, Saharidj',
+        location: 'Algeria, Tizi-ouzou, Saharidj',
         social: {
             linkedin: 'https://www.linkedin.com/in/makhlouf-fechetah-2b1085332',
             github: 'https://github.com/FechetahMakhlouf',
@@ -316,11 +316,11 @@ const createResumeCard = () => {
                     <h5><i class="ri-graduation-cap-fill"></i> Education</h5>
                     <div class="resume-item-chat">
                         <h6>Master's in AI</h6>
-                        <span>University of Bouira • 2025-2027</span>
+                        <span>University of Tizi-ouzou • 2025-2027</span>
                     </div>
                     <div class="resume-item-chat">
                         <h6>Bachelor's in CS</h6>
-                        <span>University of Bouira • 2022-2025</span>
+                        <span>University of Tizi-ouzou • 2022-2025</span>
                     </div>
                 </div>
                 <div class="resume-section-chat">
